@@ -1,6 +1,6 @@
 {
-  "name": "gatsby-starter-hello-world",
-  "description": "Gatsby hello world starter",
+  "name": "murcul-marketing-site",
+  "description": "Murcul - www.murcul.com",
   "license": "MIT",
   "scripts": {
     "develop": "gatsby develop",
@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "gatsby": "^1.9.42",
-    "gatsby-link": "^1.4.1"
+    "gatsby-link": "^1.4.1",
+    "gatsby-plugin-styled-components": "^1.0.5"
   }
 }
