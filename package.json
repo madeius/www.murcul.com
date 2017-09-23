@@ -5,7 +5,8 @@
   "scripts": {
     "develop": "gatsby develop",
     "build": "gatsby build",
-    "serve": "gatsby serve"
+    "serve": "gatsby serve",
+    "prettier": "prettier --single-quote --write --no-semi '{src,__{tests,mocks}__}/**/*.js'"
   },
   "dependencies": {
     "gatsby": "^1.9.42",
