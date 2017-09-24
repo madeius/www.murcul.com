@@ -1,27 +1,29 @@
 // @flow
-import styled from 'styled-components'
-import React from 'react'
-import logoSrc from './images/logo.svg'
-import styles from './styles.css'
+import styled from "styled-components";
+import React from "react";
+import logoSrc from "./images/logo.svg";
+import styles from "./styles.css";
 
 const NavBar = styled.nav`
   display: flex;
   flex-direction: row;
   align-items: center;
-  height: 100px;
   width: 100%;
   box-shadow: 0px 0px 35px #082aa3;
   position: relative;
-`
+`;
 
 const Page = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
-`
+`;
 
-const BrandImg = styled.img`height: 100%;`
+const BrandImg = styled.img`
+  height: 25px;
+  margin: 10px;
+`;
 
 const HeroSection = styled.section`
   background: linear-gradient(
@@ -34,9 +36,8 @@ const HeroSection = styled.section`
   width: 100%;
   color: white;
   text-align: center;
-
   min-height: 300px;
-`
+`;
 
 const InfoSection = styled.section`
   backgrond-color: #f5f5f5;
@@ -45,21 +46,21 @@ const InfoSection = styled.section`
   position: relative;
   width: 100%;
   min-height: 300px;
-`
+`;
 
-const HeroDemo = styled.button``
+const HeroDemo = styled.button``;
 
 const Info = styled.div`
   display: flex;
   flex-direction: row;
-`
+`;
 
 const Footer = styled.footer`
   background-color: #0465e7;
   width: 100%;
   min-height: 100px;
   color: white;
-`
+`;
 
 export default () => (
   <Page>
@@ -80,7 +81,6 @@ export default () => (
         <div />
       </Info>
     </InfoSection>
-
     <Footer>Copyright Murcul Limited</Footer>
   </Page>
-)
+);
