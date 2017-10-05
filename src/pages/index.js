@@ -124,12 +124,12 @@ export default class LandingPage extends React.Component {
   constructor() {
     super()
     this.state = {
-      showScheduleDemoModal: false
+      showModal: false
     }
   }
 
   render() {
-    const { showScheduleDemoModal } = this.state
+    const { showModal } = this.state
     return (
       <Page>
         <NavBar>
@@ -143,16 +143,14 @@ export default class LandingPage extends React.Component {
               <center>
                 <h3>Hire me as your next React Dev</h3>
               </center>
-              <HeroDemo
-                onClick={() => this.setState({ showScheduleDemoModal: true })}
-              >
+              <HeroDemo onClick={() => this.setState({ showModal: true })}>
                 Click here
               </HeroDemo>
             </InfoArea>
           </FlexRow>
         </Hero>
 
-        <ScheduleDemoModal isOpen={showScheduleDemoModal} />
+        <ScheduleDemoModal isOpen={showModal} />
 
         <Info>
           <Heading>Code what really matters, leave the rest to me!</Heading>
