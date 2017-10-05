@@ -12,6 +12,7 @@
     "gatsby": "^1.9.42",
     "gatsby-link": "^1.4.1",
     "gatsby-plugin-styled-components": "^1.0.5",
-    "prettier": "^1.7.0"
+    "prettier": "^1.7.0",
+    "react-modal": "^2.3.3"
   }
 }

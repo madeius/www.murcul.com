@@ -1,8 +1,11 @@
 // @flow
 import styled from 'styled-components'
 import React from 'react'
+import Modal from 'react-modal'
+
 import logoSrc from './images/logo.svg'
 import styles from './styles.css'
+import ScheduleDemoModal from './../components/ScheduleDemoModal'
 
 const NavBarContainer = styled.nav`
   width: 100%;
@@ -117,75 +120,97 @@ const Footer = props => (
   </FooterContainer>
 )
 
-export default () => (
-  <Page>
-    <NavBar>
-      <BrandImg />
-    </NavBar>
-    <Hero>
-      <FlexRow>
-        <GraphicContainer />
-        <InfoArea>
-          <Heading>Hello, I am Murcul</Heading>
-          <center>
-            <h3>Hire me as your next React Dev</h3>
-          </center>
-        </InfoArea>
-      </FlexRow>
-    </Hero>
-    <Info>
-      <Heading>Code what really matters, leave the rest to me!</Heading>
-      <FlexRow>
-        <InfoArea>
-          <InfoAreaHeading>
-            I auto-scale as more tickets get assigned
-          </InfoAreaHeading>
-          <InfoAreaDetails>
-            Assign tickets directly from JIRA, Github or your favourite ticket
-            management system.
-          </InfoAreaDetails>
-          <InfoAreaDetails>
-            Get real-time ticket status updates through Murcul Dashboard.
-          </InfoAreaDetails>
-          <InfoAreaDetails>
-            Bugs get fixed within hours, no matter how many.
-          </InfoAreaDetails>
-        </InfoArea>
-        <GraphicContainer />
-      </FlexRow>
+export default class LandingPage extends React.Component {
+  constructor() {
+    super()
+    this.state = {
+      showScheduleDemoModal: false
+    }
+  }
 
-      <EmptySpace />
+  render() {
+    const { showScheduleDemoModal } = this.state
+    return (
+      <Page>
+        <NavBar>
+          <BrandImg />
+        </NavBar>
+        <Hero>
+          <FlexRow>
+            <GraphicContainer />
+            <InfoArea>
+              <Heading>Hello, I am Murcul</Heading>
+              <center>
+                <h3>Hire me as your next React Dev</h3>
+              </center>
+              <HeroDemo
+                onClick={() => this.setState({ showScheduleDemoModal: true })}
+              >
+                Click here
+              </HeroDemo>
+            </InfoArea>
+          </FlexRow>
+        </Hero>
 
-      <FlexRow>
-        <GraphicContainer />
-        <InfoArea>
-          <InfoAreaHeading>
-            Let me take your QA to the next level
-          </InfoAreaHeading>
-          <InfoAreaDetails>
-            All PRs through Murcul come with 100% unit test coverage.
-          </InfoAreaDetails>
-          <InfoAreaDetails>
-            Fleshout integration testing for critical user flows.
-          </InfoAreaDetails>
-        </InfoArea>
-      </FlexRow>
+        <ScheduleDemoModal isOpen={showScheduleDemoModal} />
 
-      <EmptySpace />
+        <Info>
+          <Heading>Code what really matters, leave the rest to me!</Heading>
+          <FlexRow>
+            <InfoArea>
+              <InfoAreaHeading>
+                I auto-scale as more tickets get assigned
+              </InfoAreaHeading>
+              <InfoAreaDetails>
+                Assign tickets directly from JIRA, Github or your favourite
+                ticket management system.
+              </InfoAreaDetails>
+              <InfoAreaDetails>
+                Get real-time ticket status updates through Murcul Dashboard.
+              </InfoAreaDetails>
+              <InfoAreaDetails>
+                Bugs get fixed within hours, no matter how many.
+              </InfoAreaDetails>
+            </InfoArea>
+            <GraphicContainer />
+          </FlexRow>
 
-      <FlexRow>
-        <InfoArea>
-          <InfoAreaHeading>Review my code as much as you like</InfoAreaHeading>
-          <InfoAreaDetails>
-            Every assigned ticket will be fully speced before hand.
-          </InfoAreaDetails>
-          <InfoAreaDetails>
-            Never get charged for PR code revisions
-          </InfoAreaDetails>
-        </InfoArea>
-        <GraphicContainer />
-      </FlexRow>
-    </Info>
-    <Footer>Copyright Murcul Limited</Footer>
-  </Page>
-)
+          <EmptySpace />
+
+          <FlexRow>
+            <GraphicContainer />
+            <InfoArea>
+              <InfoAreaHeading>
+                Let me take your QA to the next level
+              </InfoAreaHeading>
+              <InfoAreaDetails>
+                All PRs through Murcul come with 100% unit test coverage.
+              </InfoAreaDetails>
+              <InfoAreaDetails>
+                Fleshout integration testing for critical user flows.
+              </InfoAreaDetails>
+            </InfoArea>
+          </FlexRow>
+
+          <EmptySpace />
+
+          <FlexRow>
+            <InfoArea>
+              <InfoAreaHeading>
+                Review my code as much as you like
+              </InfoAreaHeading>
+              <InfoAreaDetails>
+                Every assigned ticket will be fully speced before hand.
+              </InfoAreaDetails>
+              <InfoAreaDetails>
+                Never get charged for PR code revisions
+              </InfoAreaDetails>
+            </InfoArea>
+            <GraphicContainer />
+          </FlexRow>
+        </Info>
+        <Footer>Copyright Murcul Limited</Footer>
+      </Page>
+    )
+  }
+}
