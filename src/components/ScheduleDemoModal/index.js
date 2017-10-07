@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import React from 'react'
 import Modal from 'react-modal'
+import ScrollLock from 'react-scrolllock';
 
 import Colors from './../../colors'
 
@@ -65,6 +66,7 @@ export default class ScheduleDemoModal extends React.Component {
           <br />
           <SubmitButton type="submit" value="Submit" />
         </form>
+        <ScrollLock />
       </Modal>
     )
   }
