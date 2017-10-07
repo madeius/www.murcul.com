@@ -60,9 +60,9 @@ export default class ScheduleDemoModal extends React.Component {
         <p>Enter your details and we'll be in touch within a working day.</p>
         <form>
           <div>Name:</div>
-          <TextInput type="text" />
+          <TextInput type="text" autoFocus required />
           <div>Email:</div>
-          <TextInput type="text" />
+          <TextInput type="email" required />
           <br />
           <SubmitButton type="submit" value="Submit" />
         </form>
