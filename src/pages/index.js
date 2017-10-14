@@ -172,20 +172,7 @@ export default class LandingPage extends React.Component {
       showModal: false
     }
   }
-
-  escFunction(event){
-    if(event.keyCode === 27) {
-      this.setState({ showModal: false })
-    }
-  }
-  componentDidMount(){
-    console.log(this.state)
-    document.addEventListener("keydown", this.escFunction.bind(this), false);
-  }
-  componentWillUnmount(){
-    document.removeEventListener("keydown", this.escFunction.bind(this), false);
-  }
-
+  
   render() {
     const { showModal } = this.state
     return (

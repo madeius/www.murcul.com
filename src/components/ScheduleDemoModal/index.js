@@ -52,7 +52,11 @@ export default class ScheduleDemoModal extends React.Component {
   render() {
     const { isOpen } = this.props
     return (
-      <Modal isOpen={isOpen} style={modalBodyStyle}>
+      <Modal 
+        isOpen={isOpen}
+        shouldCloseOnOverlayClick={true}
+        closeOnEscape={true}
+        style={modalBodyStyle}>
         <center>
           <MainHeading>Schedule a demo</MainHeading>
           <h3>Your Challenges. Our Solutions</h3>
