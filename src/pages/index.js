@@ -105,10 +105,22 @@ const Positions = props => (
 
 const PositionText = styled.h1`text-align: center; color: #FFFFFF`
 const OrangeButton = styled.button`
-  width: 225px;
-  height: 45px;
+width: 225px;
+height: 45px;
+font-size: 17px;
+background-color: #FD9752;
+color: #FFFFFF;
+border-radius: 7px;
+border: none;
+cursor: pointer;
+outline: none;
+`
+const PositionTab = styled.button`
+  width: 150px;
+  height: 50px;
   font-size: 17px;
-  background-color: #FD9752;
+  margin: 0px 20px 0px 20px;
+  background-color: #CCCCCC;
   color: #FFFFFF;
   border-radius: 7px;
   border: none;
@@ -267,9 +279,29 @@ export default class LandingPage extends React.Component {
           <PositionText>Save you from hiring trouble and tedious management!</PositionText>
           <PositionText>I am a multi-talented coder!</PositionText>
 
+          <EmptySpace />
+
+          <FlexRow>
+            <PositionTab>
+              QA Engineer
+            </PositionTab>
+
+            <PositionTab>
+              Data Scientist
+            </PositionTab>
+
+            <PositionTab>
+              Frontend Dev
+            </PositionTab>
+          </FlexRow>
+
+          <EmptySpace />
+
           <OrangeButton>
             Have a look!
           </OrangeButton>
+
+          <EmptySpace />
         </Positions>
         <Footer>Copyright Murcul Limited</Footer>
       </Page>
