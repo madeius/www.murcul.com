@@ -83,6 +83,39 @@ const Info = props => (
 
 const HeroDemo = styled.button``
 
+const PositionsContainer = styled.section`
+background: linear-gradient(
+  3.23deg,
+  #1babda 2.17%,
+  #3785ed 55.54%,
+  #0465e7 89.32%
+),
+#c4c4c4;
+text-align: center;
+position: relative;
+width: 100%;
+min-height: 300px;
+`
+
+const Positions = props => (
+<PositionsContainer>
+  <Section {...props} />
+</PositionsContainer>
+)
+
+const PositionText = styled.h1`text-align: center; color: #FFFFFF`
+const OrangeButton = styled.button`
+  width: 225px;
+  height: 45px;
+  font-size: 17px;
+  background-color: #FD9752;
+  color: #FFFFFF;
+  border-radius: 7px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+`
+
 const FooterContainer = styled.footer`
   background-color: #0465e7;
   width: 100%;
@@ -156,9 +189,9 @@ export default class LandingPage extends React.Component {
               <center>
                 <h3>Hire me as your next React Dev</h3>
               </center>
-              <HeroDemo onClick={() => this.setState({ showModal: true })}>
-                Click here
-              </HeroDemo>
+              <OrangeButton onClick={() => this.setState({ showModal: true })}>
+                Learn More
+              </OrangeButton>
             </InfoArea>
           </FlexRow>
         </Hero>
@@ -219,7 +252,25 @@ export default class LandingPage extends React.Component {
             </InfoArea>
             <GraphicContainer />
           </FlexRow>
+
+          <EmptySpace />
+
+          <OrangeButton>
+            Take a tour
+          </OrangeButton>
+          
+          <EmptySpace />
         </Info>
+        <Positions>
+          <PositionText>I am a multi-talented coder!</PositionText>
+          <PositionText>I can preform many roles for your organization!</PositionText>
+          <PositionText>Save you from hiring trouble and tedious management!</PositionText>
+          <PositionText>I am a multi-talented coder!</PositionText>
+
+          <OrangeButton>
+            Have a look!
+          </OrangeButton>
+        </Positions>
         <Footer>Copyright Murcul Limited</Footer>
       </Page>
     )
