@@ -134,7 +134,7 @@ const FlexRow = styled.div`
   flex-direction: row;
 `
 
-const InfoArea = styled.div`width: 100%;`
+const InfoArea = styled.div`width: 100%; text-align: center;`
 
 const InfoAreaHeading = styled.h3`
   text-align: left;
@@ -258,7 +258,7 @@ export default class LandingPage extends React.Component {
           <OrangeButton>
             Take a tour
           </OrangeButton>
-          
+
           <EmptySpace />
         </Info>
         <Positions>
