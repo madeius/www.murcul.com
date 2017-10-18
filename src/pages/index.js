@@ -278,13 +278,9 @@ export default class LandingPage extends React.Component {
 
           <EmptySpace />
 
-          <FlexRow>
-            <PositionTab>QA Engineer</PositionTab>
-
-            <PositionTab>Data Scientist</PositionTab>
-
-            <PositionTab>Frontend Dev</PositionTab>
-          </FlexRow>
+          <PositionTab>QA Engineer</PositionTab>
+          <PositionTab>Data Scientist</PositionTab>
+          <PositionTab>Frontend Dev</PositionTab>
 
           <EmptySpace />
 
