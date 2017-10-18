@@ -3,7 +3,10 @@ import styled from 'styled-components'
 import React from 'react'
 import Modal from 'react-modal'
 
-import logoSrc from './images/logo.svg'
+import logoSrc from '../assets/logo.svg'
+import graphSrc from '../assets/graph.svg'
+import ticketSrc from '../assets/ticket.gif'
+import integrationSrc from '../assets/integrations.svg'
 import styles from './styles.css'
 import ScheduleDemoModal from './../components/ScheduleDemoModal'
 
@@ -84,44 +87,47 @@ const Info = props => (
 const HeroDemo = styled.button``
 
 const PositionsContainer = styled.section`
-background: linear-gradient(
-  3.23deg,
-  #1babda 2.17%,
-  #3785ed 55.54%,
-  #0465e7 89.32%
-),
-#c4c4c4;
-text-align: center;
-position: relative;
-width: 100%;
-min-height: 300px;
+  background: linear-gradient(
+      3.23deg,
+      #1babda 2.17%,
+      #3785ed 55.54%,
+      #0465e7 89.32%
+    ),
+    #c4c4c4;
+  text-align: center;
+  position: relative;
+  width: 100%;
+  min-height: 300px;
 `
 
 const Positions = props => (
-<PositionsContainer>
-  <Section {...props} />
-</PositionsContainer>
+  <PositionsContainer>
+    <Section {...props} />
+  </PositionsContainer>
 )
 
-const PositionText = styled.h1`text-align: center; color: #FFFFFF`
+const PositionText = styled.h1`
+  text-align: center;
+  color: #ffffff;
+`
 const OrangeButton = styled.button`
-width: 225px;
-height: 45px;
-font-size: 17px;
-background-color: #FD9752;
-color: #FFFFFF;
-border-radius: 7px;
-border: none;
-cursor: pointer;
-outline: none;
+  width: 225px;
+  height: 45px;
+  font-size: 17px;
+  background-color: #fd9752;
+  color: #ffffff;
+  border-radius: 7px;
+  border: none;
+  cursor: pointer;
+  outline: none;
 `
 const PositionTab = styled.button`
   width: 150px;
   height: 50px;
   font-size: 17px;
   margin: 0px 20px 0px 20px;
-  background-color: #CCCCCC;
-  color: #FFFFFF;
+  background-color: #cccccc;
+  color: #ffffff;
   border-radius: 7px;
   border: none;
   cursor: pointer;
@@ -135,9 +141,10 @@ const FooterContainer = styled.footer`
   color: white;
 `
 
-const GraphicContainer = styled.div`
-  width: 100%;
-  background-color: orange;
+const GraphicContainer = styled.img`
+  width: 40%;
+  margin-left: 5%;
+  margin-right: 5%;
 `
 
 const FlexRow = styled.div`
@@ -146,7 +153,10 @@ const FlexRow = styled.div`
   flex-direction: row;
 `
 
-const InfoArea = styled.div`width: 100%; text-align: center;`
+const InfoArea = styled.div`
+  width: 60%;
+  text-align: center;
+`
 
 const InfoAreaHeading = styled.h3`
   text-align: left;
@@ -172,7 +182,7 @@ export default class LandingPage extends React.Component {
       showModal: false
     }
   }
-  
+
   render() {
     const { showModal } = this.state
     return (
@@ -201,9 +211,7 @@ export default class LandingPage extends React.Component {
           <Heading>Code what really matters, leave the rest to me!</Heading>
           <FlexRow>
             <InfoArea>
-              <InfoAreaHeading>
-                I auto-scale as more tickets get assigned
-              </InfoAreaHeading>
+              <InfoAreaHeading>Managing me is super easy!</InfoAreaHeading>
               <InfoAreaDetails>
                 Assign tickets directly from JIRA, Github or your favourite
                 ticket management system.
@@ -212,19 +220,19 @@ export default class LandingPage extends React.Component {
                 Get real-time ticket status updates through Murcul Dashboard.
               </InfoAreaDetails>
               <InfoAreaDetails>
-                Bugs get fixed within hours, no matter how many.
+                Bugs get fixed within hours, no matter how many
               </InfoAreaDetails>
             </InfoArea>
-            <GraphicContainer />
+            <GraphicContainer src={integrationSrc} />
           </FlexRow>
 
           <EmptySpace />
 
           <FlexRow>
-            <GraphicContainer />
+            <GraphicContainer src={graphSrc} />
             <InfoArea>
               <InfoAreaHeading>
-                Let me take your QA to the next level
+                I auto-scale and adapt to the workload
               </InfoAreaHeading>
               <InfoAreaDetails>
                 All PRs through Murcul come with 100% unit test coverage.
@@ -239,9 +247,7 @@ export default class LandingPage extends React.Component {
 
           <FlexRow>
             <InfoArea>
-              <InfoAreaHeading>
-                Review my code as much as you like
-              </InfoAreaHeading>
+              <InfoAreaHeading>I meet deadlines. Seriously!</InfoAreaHeading>
               <InfoAreaDetails>
                 Every assigned ticket will be fully speced before hand.
               </InfoAreaDetails>
@@ -249,44 +255,38 @@ export default class LandingPage extends React.Component {
                 Never get charged for PR code revisions
               </InfoAreaDetails>
             </InfoArea>
-            <GraphicContainer />
+            <GraphicContainer src={ticketSrc} />
           </FlexRow>
 
           <EmptySpace />
 
-          <OrangeButton>
-            Take a tour
-          </OrangeButton>
+          <OrangeButton>Take a tour</OrangeButton>
 
           <EmptySpace />
         </Info>
         <Positions>
           <PositionText>I am a multi-talented coder!</PositionText>
-          <PositionText>I can preform many roles for your organization!</PositionText>
-          <PositionText>Save you from hiring trouble and tedious management!</PositionText>
+          <PositionText>
+            I can preform many roles for your organization!
+          </PositionText>
+          <PositionText>
+            Save you from hiring trouble and tedious management!
+          </PositionText>
           <PositionText>I am a multi-talented coder!</PositionText>
 
           <EmptySpace />
 
           <FlexRow>
-            <PositionTab>
-              QA Engineer
-            </PositionTab>
+            <PositionTab>QA Engineer</PositionTab>
 
-            <PositionTab>
-              Data Scientist
-            </PositionTab>
+            <PositionTab>Data Scientist</PositionTab>
 
-            <PositionTab>
-              Frontend Dev
-            </PositionTab>
+            <PositionTab>Frontend Dev</PositionTab>
           </FlexRow>
 
           <EmptySpace />
 
-          <OrangeButton>
-            Have a look!
-          </OrangeButton>
+          <OrangeButton>Have a look!</OrangeButton>
 
           <EmptySpace />
         </Positions>

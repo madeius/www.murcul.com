@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import React from 'react'
 import Modal from 'react-modal'
-import ScrollLock from 'react-scrolllock';
+import ScrollLock from 'react-scrolllock'
 
 import Colors from './../../colors'
 
@@ -52,11 +52,12 @@ export default class ScheduleDemoModal extends React.Component {
   render() {
     const { isOpen } = this.props
     return (
-      <Modal 
+      <Modal
         isOpen={isOpen}
         shouldCloseOnOverlayClick={true}
         closeOnEscape={true}
-        style={modalBodyStyle}>
+        style={modalBodyStyle}
+      >
         <center>
           <MainHeading>Schedule a demo</MainHeading>
           <h3>Your Challenges. Our Solutions</h3>
