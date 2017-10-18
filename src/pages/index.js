@@ -183,6 +183,8 @@ export default class LandingPage extends React.Component {
     }
   }
 
+  closeModal = () => this.setState({ showModal: false });
+
   render() {
     const { showModal } = this.state
     return (
@@ -205,7 +207,7 @@ export default class LandingPage extends React.Component {
           </FlexRow>
         </Hero>
 
-        <ScheduleDemoModal isOpen={showModal} />
+        <ScheduleDemoModal isOpen={showModal} closeModal={this.closeModal} />
 
         <Info>
           <Heading>Code what really matters, leave the rest to me!</Heading>

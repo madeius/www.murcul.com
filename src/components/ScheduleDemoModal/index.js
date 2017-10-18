@@ -54,6 +54,7 @@ export default class ScheduleDemoModal extends React.Component {
     return (
       <Modal
         isOpen={isOpen}
+        onRequestClose={this.props.closeModal}
         shouldCloseOnOverlayClick={true}
         closeOnEscape={true}
         style={modalBodyStyle}
