@@ -179,7 +179,10 @@ export default class LandingPage extends React.Component {
   constructor() {
     super()
     this.state = {
-      showModal: false
+      showModal: false,
+      tab1Selected: false,
+      tab2Selected: false,
+      tab3Selected: false
     }
   }
 
@@ -267,6 +270,7 @@ export default class LandingPage extends React.Component {
           <EmptySpace />
         </Info>
         <Positions>
+          <EmptySpace />
           <PositionText>I am a multi-talented coder!</PositionText>
           <PositionText>
             I can preform many roles for your organization!
@@ -278,7 +282,7 @@ export default class LandingPage extends React.Component {
 
           <EmptySpace />
 
-          <PositionTab>QA Engineer</PositionTab>
+          <PositionTab onClick={() => this.setState({ tab1Selected: true })}>QA Engineer</PositionTab>
           <PositionTab>Data Scientist</PositionTab>
           <PositionTab>Frontend Dev</PositionTab>
 
