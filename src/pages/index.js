@@ -7,6 +7,7 @@ import logoSrc from '../assets/logo.svg'
 import graphSrc from '../assets/graph.svg'
 import ticketSrc from '../assets/ticket.gif'
 import integrationSrc from '../assets/integrations.svg'
+import logo from '../assets/logo-w.svg'
 import styles from './styles.css'
 import ScheduleDemoModal from './../components/ScheduleDemoModal'
 
@@ -28,7 +29,19 @@ const NavBarSection = Section.extend`
   align-items: center;
 `
 
-const Heading = styled.h1`text-align: center;`
+const TitleHeading = styled.h1`
+  text-align: center;
+  color: white;
+  font-size: 40px;
+  font-family: Dosis;
+`
+const Heading = styled.h1`
+  text-align: center;
+  color: #0465E7;
+  margin: 40px 0px 40px 0;
+  font-size: 30px;
+  font-family: Dosis;
+`
 
 const NavBar = props => (
   <NavBarContainer>
@@ -120,6 +133,9 @@ const OrangeButton = styled.button`
   border: none;
   cursor: pointer;
   outline: none;
+  font-size: 22px;
+  font-family: Dosis;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, .4);
 `
 const PositionTab = styled.button`
   width: 150px;
@@ -156,16 +172,17 @@ const FlexRow = styled.div`
 const InfoArea = styled.div`
   width: 60%;
   text-align: center;
+  font-family: Dosis;
 `
 
 const InfoAreaHeading = styled.h3`
   text-align: left;
-  font-size: 18px;
+  font-size: 22px;
 `
 
 const InfoAreaDetails = styled.p`
   text-align: left;
-  font-size: 14px;
+  font-size: 16px;
 `
 
 const EmptySpace = styled.div`height: 30px;`
@@ -199,7 +216,8 @@ export default class LandingPage extends React.Component {
           <FlexRow>
             <GraphicContainer />
             <InfoArea>
-              <Heading>Hello, I am Murcul</Heading>
+              <GraphicContainer src={logo}/>
+              <TitleHeading>Hello, I am Murcul</TitleHeading>
               <center>
                 <h3>Hire me as your next React Dev</h3>
               </center>
