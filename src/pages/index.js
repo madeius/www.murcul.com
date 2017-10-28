@@ -1,67 +1,68 @@
 // @flow
-import styled from 'styled-components'
-import React from 'react'
-import Modal from 'react-modal'
+import styled from "styled-components";
+import React from "react";
+import Modal from "react-modal";
 
-import logoSrc from '../assets/logo.svg'
-import graphSrc from '../assets/graph.svg'
-import ticketSrc from '../assets/ticket.gif'
-import integrationSrc from '../assets/integrations.svg'
-import logo from '../assets/logo-w.svg'
-import styles from './styles.css'
-import ScheduleDemoModal from './../components/ScheduleDemoModal'
+import logoSrc from "../assets/logo.svg";
+import graphSrc from "../assets/graph.svg";
+import ticketSrc from "../assets/ticket.gif";
+import integrationSrc from "../assets/integrations.svg";
+import logoInvertedSrc from "../assets/logo-w.svg";
+
+import styles from "./styles.css";
+import ScheduleDemoModal from "./../components/ScheduleDemoModal";
 
 const NavBarContainer = styled.nav`
   width: 100%;
   box-shadow: 0px 0px 35px #082aa3;
   position: relative;
-`
+`;
 
 const Section = styled.div`
   width: 100%;
   max-width: 800px;
   margin: auto;
-`
+`;
 
 const NavBarSection = Section.extend`
   display: flex;
   flex-direction: row;
   align-items: center;
-`
+`;
 
 const TitleHeading = styled.h1`
   text-align: center;
   color: white;
   font-size: 40px;
   font-family: Dosis;
-`
+`;
 const Heading = styled.h1`
   text-align: center;
-  color: #0465E7;
+  color: #0465e7;
   margin: 40px 0px 40px 0;
   font-size: 30px;
   font-family: Dosis;
-`
+`;
 
 const NavBar = props => (
   <NavBarContainer>
     <NavBarSection {...props} />
   </NavBarContainer>
-)
+);
 
 const Page = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
-`
+`;
 
 const BrandImg = styled.img.attrs({
   src: logoSrc
 })`
   height: 25px;
   margin: 10px 0px;
-`
+`;
 
 const HeroContainer = styled.div`
   background: linear-gradient(
@@ -74,13 +75,13 @@ const HeroContainer = styled.div`
   width: 100%;
   color: white;
   min-height: 300px;
-`
+`;
 
 const Hero = props => (
   <HeroContainer>
     <Section {...props} />
   </HeroContainer>
-)
+);
 
 const InfoContainer = styled.section`
   backgrond-color: #f5f5f5;
@@ -89,15 +90,15 @@ const InfoContainer = styled.section`
   position: relative;
   width: 100%;
   min-height: 300px;
-`
+`;
 
 const Info = props => (
   <InfoContainer>
     <Section {...props} />
   </InfoContainer>
-)
+);
 
-const HeroDemo = styled.button``
+const HeroDemo = styled.button``;
 
 const PositionsContainer = styled.section`
   background: linear-gradient(
@@ -111,18 +112,18 @@ const PositionsContainer = styled.section`
   position: relative;
   width: 100%;
   min-height: 300px;
-`
+`;
 
 const Positions = props => (
   <PositionsContainer>
     <Section {...props} />
   </PositionsContainer>
-)
+);
 
 const PositionText = styled.h1`
   text-align: center;
   color: #ffffff;
-`
+`;
 const OrangeButton = styled.button`
   width: 225px;
   height: 45px;
@@ -135,8 +136,8 @@ const OrangeButton = styled.button`
   outline: none;
   font-size: 22px;
   font-family: Dosis;
-  box-shadow: 0px 3px 10px rgba(0, 0, 0, .4);
-`
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.4);
+`;
 const PositionTab = styled.button`
   width: 150px;
   height: 50px;
@@ -148,65 +149,65 @@ const PositionTab = styled.button`
   border: none;
   cursor: pointer;
   outline: none;
-`
+`;
 
 const FooterContainer = styled.footer`
   background-color: #0465e7;
   width: 100%;
   min-height: 100px;
   color: white;
-`
+`;
 
 const GraphicContainer = styled.img`
   width: 40%;
   margin-left: 5%;
   margin-right: 5%;
-`
+`;
 
 const FlexRow = styled.div`
   display: flex;
   height: 100%;
   flex-direction: row;
-`
+`;
 
 const InfoArea = styled.div`
   width: 60%;
   text-align: center;
   font-family: Dosis;
-`
+`;
 
 const InfoAreaHeading = styled.h3`
   text-align: left;
   font-size: 22px;
-`
+`;
 
 const InfoAreaDetails = styled.p`
   text-align: left;
   font-size: 16px;
-`
+`;
 
-const EmptySpace = styled.div`height: 30px;`
+const EmptySpace = styled.div`height: 30px;`;
 const Footer = props => (
   <FooterContainer>
     <Section {...props} />
   </FooterContainer>
-)
+);
 
 export default class LandingPage extends React.Component {
   constructor() {
-    super()
+    super();
     this.state = {
       showModal: false,
       tab1Selected: false,
       tab2Selected: false,
       tab3Selected: false
-    }
+    };
   }
 
   closeModal = () => this.setState({ showModal: false });
 
   render() {
-    const { showModal } = this.state
+    const { showModal } = this.state;
     return (
       <Page>
         <NavBar>
@@ -216,7 +217,7 @@ export default class LandingPage extends React.Component {
           <FlexRow>
             <GraphicContainer />
             <InfoArea>
-              <GraphicContainer src={logo}/>
+              <GraphicContainer src={logoInvertedSrc} />
               <TitleHeading>Hello, I am Murcul</TitleHeading>
               <center>
                 <h3>Hire me as your next React Dev</h3>
@@ -300,7 +301,9 @@ export default class LandingPage extends React.Component {
 
           <EmptySpace />
 
-          <PositionTab onClick={() => this.setState({ tab1Selected: true })}>QA Engineer</PositionTab>
+          <PositionTab onClick={() => this.setState({ tab1Selected: true })}>
+            QA Engineer
+          </PositionTab>
           <PositionTab>Data Scientist</PositionTab>
           <PositionTab>Frontend Dev</PositionTab>
 
@@ -312,6 +315,6 @@ export default class LandingPage extends React.Component {
         </Positions>
         <Footer>Copyright Murcul Limited</Footer>
       </Page>
-    )
+    );
   }
 }
