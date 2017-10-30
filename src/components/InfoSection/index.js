@@ -1,0 +1,129 @@
+import React from "react";
+import styled from "styled-components";
+import Button from "../Button";
+
+import logoSrc from "../../assets/logo-inverted.png";
+import graphSrc from "../../assets/graph.svg";
+import ticketSrc from "../../assets/ticket.gif";
+import ticketInvertedSrc from "../../assets/ticket-inverted.gif";
+import integrationSrc from "../../assets/integrations.svg";
+import logoInvertedSrc from "../../assets/logo-icon-inverted.svg";
+
+const Section = styled.div`
+  width: 80%;
+  margin: auto;
+`;
+
+const Heading = styled.h1`
+  text-align: center;
+  color: #0465e7;
+  margin: 40px 0px 40px 0;
+  font-size: 30px;
+`;
+
+const GraphicContainer = styled.div`
+  max-width: 60%;
+  margin-left: 5%;
+  margin-right: 5%;
+  max-height: 500px;
+`;
+
+const InfoContainer = styled.section`
+  backgrond-color: #f5f5f5;
+  text-align: center;
+  box-shadow: 0px 0px 35px #082aa3;
+  position: relative;
+  width: 100%;
+  min-height: 300px;
+`;
+
+const Info = props => (
+  <InfoContainer>
+    <Section {...props} />
+  </InfoContainer>
+);
+
+const GraphicImg = styled.img`width: 100%;`;
+
+const Graphic = ({ src }) => (
+  <GraphicContainer>
+    <GraphicImg src={src} />
+  </GraphicContainer>
+);
+
+const FlexRow = styled.div`
+  display: flex;
+  height: 100%;
+  flex-direction: row;
+  align-items: center;
+  justify-items: center;
+`;
+
+const InfoArea = styled.div`
+  width: 40%;
+  text-align: center;
+`;
+
+const InfoAreaHeading = styled.h3`
+  text-align: left;
+  font-size: 22px;
+`;
+
+const InfoAreaDetails = styled.p`
+  text-align: left;
+  font-size: 16px;
+`;
+
+export default function InfoSection() {
+  return (
+    <Info>
+      <Heading>Code what really matters, leave the rest to me!</Heading>
+      <FlexRow>
+        <InfoArea>
+          <InfoAreaHeading>Managing me is super easy!</InfoAreaHeading>
+          <InfoAreaDetails>
+            Assign tickets directly from JIRA, Github or your favourite ticket
+            management system.
+          </InfoAreaDetails>
+          <InfoAreaDetails>
+            Get real-time ticket status updates through Murcul Dashboard.
+          </InfoAreaDetails>
+          <InfoAreaDetails>
+            Bugs get fixed within hours, no matter how many
+          </InfoAreaDetails>
+        </InfoArea>
+        <Graphic src={integrationSrc} />
+      </FlexRow>
+
+      <FlexRow>
+        <Graphic src={graphSrc} />
+        <InfoArea>
+          <InfoAreaHeading>
+            I auto-scale and adapt to the workload
+          </InfoAreaHeading>
+          <InfoAreaDetails>
+            All PRs through Murcul come with 100% unit test coverage.
+          </InfoAreaDetails>
+          <InfoAreaDetails>
+            Fleshout integration testing for critical user flows.
+          </InfoAreaDetails>
+        </InfoArea>
+      </FlexRow>
+
+      <FlexRow>
+        <InfoArea>
+          <InfoAreaHeading>I meet deadlines. Seriously!</InfoAreaHeading>
+          <InfoAreaDetails>
+            Every assigned ticket will be fully speced before hand.
+          </InfoAreaDetails>
+          <InfoAreaDetails>
+            Never get charged for PR code revisions
+          </InfoAreaDetails>
+        </InfoArea>
+        <Graphic src={ticketSrc} />
+      </FlexRow>
+
+      <Button>Take a tour</Button>
+    </Info>
+  );
+}
