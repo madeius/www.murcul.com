@@ -4,9 +4,15 @@ import Button from "../Button";
 import styled from "styled-components";
 
 const TitleHeading = styled.h1`
+text-align: center;
+color: white;
+font-size: 50px;
+`;
+
+const SubtitleHeading = styled.h3`
   text-align: center;
   color: white;
-  font-size: 40px;
+  font-size: 25px;
 `;
 
 const Section = styled.section`
@@ -48,13 +54,13 @@ export default function HeroSection() {
       <Header />
       <Hero>
         <TitleHeading>Hello, I am Murcul</TitleHeading>
-        <h3>On Demand, self managed engineering team in the cloud</h3>
+        <SubtitleHeading>On Demand, self managed engineering team in the cloud</SubtitleHeading>
         <Controls>
           <Button onClick={() => this.setState({ showModal: true })}>
-            Tell me more
+            Tell Me More
           </Button>
           <Button onClick={() => this.setState({ showModal: true })}>
-            Schedule a demo
+            Schedule A Demo
           </Button>
         </Controls>
       </Hero>

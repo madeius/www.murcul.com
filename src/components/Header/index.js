@@ -5,31 +5,49 @@ import styled from "styled-components";
 const NavBar = styled.section`
   width: 100%;
   height: 60px;
-  padding-top: 20px;
+  margin-top: 20px;
   display: flex;
 `;
 
 const NavBarLogo = styled.img`
   height: 100%;
-  margin-right: 20%;
+  line-height: 60px;
+`;
+
+const NavBarLogoGroup = styled.div`
+  height: 100%;
+  width: 100%;
+  float: left;
 `;
 
 const NavBarItem = styled.a`
   height: 100%;
-  display: flex;
   font-size: 24px;
   justify-content: center;
   align-items: center;
-  margin-right: 100px;
+  margin-left: 60px;
+  line-height: 60px;
+  padding: 25px;
+  cursor: pointer;
+`;
+
+const NavBarItemGroup = styled.div`
+  float: right;
+  width: 100%;
+  text-align: right;
 `;
 
 export default function Header() {
   return (
     <NavBar>
-      <NavBarLogo src={logoSrc} />
-      <NavBarItem>About</NavBarItem>
-      <NavBarItem>Contact</NavBarItem>
-      <NavBarItem>Blog</NavBarItem>
+      <NavBarLogoGroup>
+        <NavBarLogo src={logoSrc} />
+      </NavBarLogoGroup>
+      <NavBarItemGroup>
+        <NavBarItem>About</NavBarItem>
+        <NavBarItem>Contact</NavBarItem>
+        <NavBarItem>Blog</NavBarItem>
+      </NavBarItemGroup>
     </NavBar>
   );
 }
