@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 export default styled.button`
   width: 250px;
   height: 50px;
@@ -10,6 +10,5 @@ export default styled.button`
   cursor: pointer;
   outline: none;
   font-size: 22px;
-  font-family: Dosis;
   box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.4);
-`;
+`

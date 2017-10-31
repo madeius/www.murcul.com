@@ -1,18 +1,18 @@
-import React from "react";
-import styled from "styled-components";
-import Button from "../Button";
+import React from 'react'
+import styled from 'styled-components'
+import Button from '../Button'
 
-import logoSrc from "../../assets/logo-inverted.png";
-import graphSrc from "../../assets/graph.svg";
-import ticketSrc from "../../assets/ticket.gif";
-import ticketInvertedSrc from "../../assets/ticket-inverted.gif";
-import integrationSrc from "../../assets/integrations.svg";
-import logoInvertedSrc from "../../assets/logo-icon-inverted.svg";
+import logoSrc from '../../assets/logo-inverted.png'
+import graphSrc from '../../assets/graph.svg'
+import ticketSrc from '../../assets/ticket.gif'
+import ticketInvertedSrc from '../../assets/ticket-inverted.gif'
+import integrationSrc from '../../assets/integrations.svg'
+import logoInvertedSrc from '../../assets/logo-icon-inverted.svg'
 
 const Section = styled.div`
   width: 70%;
   margin: auto;
-`;
+`
 
 const Heading = styled.h1`
   text-align: center;
@@ -20,7 +20,7 @@ const Heading = styled.h1`
   margin: 40px 0px 40px 0;
   font-size: 45px;
   margin-bottom: 100px;
-`;
+`
 
 const GraphicContainerLeft = styled.div`
   max-width: 60%;
@@ -42,15 +42,15 @@ const InfoContainer = styled.section`
   min-height: 300px;
   padding-bottom: 60px;
   padding-top: 60px;
-`;
+`
 
 const Info = props => (
   <InfoContainer>
     <Section {...props} />
   </InfoContainer>
-);
+)
 
-const GraphicImg = styled.img`width: 100%;`;
+const GraphicImg = styled.img`width: 100%;`
 
 const FlexRow = styled.div`
   display: flex;
@@ -58,17 +58,17 @@ const FlexRow = styled.div`
   flex-direction: row;
   justify-items: center;
   margin-bottom: 80px;
-`;
+`
 
 const InfoArea = styled.div`
   width: 100%;
   text-align: center;
-`;
+`
 
 const InfoAreaHeading = styled.h3`
   text-align: left;
   font-size: 26px;
-`;
+`
 
 const InfoAreaDetails = styled.p`
   text-align: left;
@@ -155,5 +155,5 @@ export default function InfoSection() {
         <Button>Take a tour</Button>
       </ButtonContainer>
     </Info>
-  );
+  )
 }

@@ -1,11 +1,11 @@
-import React from "react";
-import Button from "../Button";
-import styled from "styled-components";
+import React from 'react'
+import Button from '../Button'
+import styled from 'styled-components'
 
 const Section = styled.div`
   width: 80%;
   margin: auto;
-`;
+`
 
 const PositionsContainer = styled.section`
   background: linear-gradient(
@@ -21,32 +21,49 @@ const PositionsContainer = styled.section`
   min-height: 300px;
   padding-top: 60px;
   padding-bottom: 60px;
-`;
+`
 
 const Positions = props => (
   <PositionsContainer>
     <Section {...props} />
   </PositionsContainer>
-);
+)
 
 const PositionText = styled.h1`
   text-align: center;
   color: #ffffff;
   font-size: 45px;
-`;
+`
 
 const PositionTab = styled.button`
   width: 150px;
   height: 50px;
   font-size: 17px;
-  margin: 0px 60px 0px 60px;
   background-color: #cccccc;
   color: #ffffff;
   border-radius: 7px;
   border: none;
   cursor: pointer;
   outline: none;
-`;
+`
+
+const PositionTabs = styled.div`
+  display: flex;
+  flex-direction: row;
+  width: 70%;
+  margin: auto;
+  justify-content: space-around;
+  align-items: center;
+`
+
+const PositionGraphic = styled.div`
+  height: 300px;
+  width: 70%;
+  margin: auto;
+  background-color: lightgrey;
+  margin-top: 60px;
+  margin-bottom: 60px;
+`
 
 export default function PositionsSection() {
   return (
@@ -54,11 +71,13 @@ export default function PositionsSection() {
       <PositionText>
         I can preform many roles for your organization!
       </PositionText>
-
-      <PositionTab>QA Engineer</PositionTab>
-      <PositionTab>Data Scientist</PositionTab>
-      <PositionTab>Frontend Dev</PositionTab>
+      <PositionTabs>
+        <PositionTab>QA Engineer</PositionTab>
+        <PositionTab>Data Scientist</PositionTab>
+        <PositionTab>Frontend Dev</PositionTab>
+      </PositionTabs>
+      <PositionGraphic />
       <Button>Have a look!</Button>
     </Positions>
-  );
+  )
 }

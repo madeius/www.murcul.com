@@ -1,19 +1,19 @@
-import React from "react";
-import Header from "../Header";
-import Button from "../Button";
-import styled from "styled-components";
+import React from 'react'
+import Header from '../Header'
+import Button from '../Button'
+import styled from 'styled-components'
 
 const TitleHeading = styled.h1`
-text-align: center;
-color: white;
-font-size: 50px;
-`;
+  text-align: center;
+  color: white;
+  font-size: 50px;
+`
 
 const SubtitleHeading = styled.h3`
   text-align: center;
   color: white;
   font-size: 25px;
-`;
+`
 
 const Section = styled.section`
   background: linear-gradient(
@@ -31,7 +31,7 @@ const Section = styled.section`
 
   display: flex;
   flex-direction: column;
-`;
+`
 
 const Hero = styled.div`
   flex-grow: 1;
@@ -39,14 +39,14 @@ const Hero = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-`;
+`
 
 const Controls = styled.div`
   display: flex;
   justify-content: space-around;
   width: 50%;
   margin-top: 20px;
-`;
+`
 
 export default function HeroSection() {
   return (
@@ -54,7 +54,9 @@ export default function HeroSection() {
       <Header />
       <Hero>
         <TitleHeading>Hello, I am Murcul</TitleHeading>
-        <SubtitleHeading>On Demand, self managed engineering team in the cloud</SubtitleHeading>
+        <SubtitleHeading>
+          On Demand, self managed engineering team in the cloud
+        </SubtitleHeading>
         <Controls>
           <Button onClick={() => this.setState({ showModal: true })}>
             Tell Me More
@@ -65,5 +67,5 @@ export default function HeroSection() {
         </Controls>
       </Hero>
     </Section>
-  );
+  )
 }
