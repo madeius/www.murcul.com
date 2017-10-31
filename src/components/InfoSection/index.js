@@ -18,7 +18,8 @@ const Heading = styled.h1`
   text-align: center;
   color: #0465e7;
   margin: 40px 0px 40px 0;
-  font-size: 30px;
+  font-size: 45px;
+  margin-bottom: 100px;
 `;
 
 const GraphicContainerLeft = styled.div`
@@ -39,6 +40,8 @@ const InfoContainer = styled.section`
   position: relative;
   width: 100%;
   min-height: 300px;
+  padding-bottom: 60px;
+  padding-top: 60px;
 `;
 
 const Info = props => (
@@ -53,7 +56,6 @@ const FlexRow = styled.div`
   display: flex;
   height: 100%;
   flex-direction: row;
-  align-items: center;
   justify-items: center;
   margin-top: 35px;
   margin-bottom: 35px;
@@ -66,12 +68,12 @@ const InfoArea = styled.div`
 
 const InfoAreaHeading = styled.h3`
   text-align: left;
-  font-size: 22px;
+  font-size: 26px;
 `;
 
 const InfoAreaDetails = styled.p`
   text-align: left;
-  font-size: 16px;
+  font-size: 24px;
 `;
 
 const Left = styled.div`
@@ -87,6 +89,7 @@ const Right = styled.div`
   margin-left: 10%;
   text-align: right;
 `
+const ButtonContainer = styled.div`margin-top: 140px;`;
 
 export default function InfoSection() {
   return (
@@ -148,8 +151,9 @@ export default function InfoSection() {
           <GraphicImg src={ticketSrc} />
         </GraphicContainerRight>
       </FlexRow>
-
-      <Button>Take a tour</Button>
+      <ButtonContainer>
+        <Button>Take a tour</Button>
+      </ButtonContainer>
     </Info>
   );
 }

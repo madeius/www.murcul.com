@@ -19,6 +19,8 @@ const PositionsContainer = styled.section`
   position: relative;
   width: 100%;
   min-height: 300px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 `;
 
 const Positions = props => (
@@ -30,13 +32,14 @@ const Positions = props => (
 const PositionText = styled.h1`
   text-align: center;
   color: #ffffff;
+  font-size: 45px;
 `;
 
 const PositionTab = styled.button`
   width: 150px;
   height: 50px;
   font-size: 17px;
-  margin: 0px 20px 0px 20px;
+  margin: 0px 60px 0px 60px;
   background-color: #cccccc;
   color: #ffffff;
   border-radius: 7px;
@@ -55,7 +58,6 @@ export default function PositionsSection() {
       <PositionTab>QA Engineer</PositionTab>
       <PositionTab>Data Scientist</PositionTab>
       <PositionTab>Frontend Dev</PositionTab>
-      <br/>
       <Button>Have a look!</Button>
     </Positions>
   );
