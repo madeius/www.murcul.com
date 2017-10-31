@@ -15,6 +15,8 @@ const PricingContainer = styled.section`
   padding-bottom: 60px;
   text-align: center;
   position: relative;
+  box-shadow: 0px 0px 35px #082aa3;
+  z-index: 2;
 `
 
 const Pricing = props => (

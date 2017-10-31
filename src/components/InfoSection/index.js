@@ -42,6 +42,7 @@ const InfoContainer = styled.section`
   min-height: 300px;
   padding-bottom: 60px;
   padding-top: 60px;
+  z-index: 2;
 `
 
 const Info = props => (
