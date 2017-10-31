@@ -10,7 +10,7 @@ import integrationSrc from '../../assets/integrations.svg'
 import logoInvertedSrc from '../../assets/logo-icon-inverted.svg'
 
 const Section = styled.div`
-  width: 80%;
+  width: 70%;
   margin: auto;
 `
 
@@ -22,12 +22,16 @@ const Heading = styled.h1`
   margin-bottom: 100px;
 `
 
-const GraphicContainer = styled.div`
+const GraphicContainerLeft = styled.div`
   max-width: 60%;
-  margin-left: 5%;
-  margin-right: 5%;
   max-height: 500px;
-`
+  float: left;
+`;
+const GraphicContainerRight = styled.div`
+  max-width: 60%;
+  max-height: 500px;
+  float: right;
+`;
 
 const InfoContainer = styled.section`
   backgrond-color: #f5f5f5;
@@ -48,12 +52,6 @@ const Info = props => (
 
 const GraphicImg = styled.img`width: 100%;`
 
-const Graphic = ({ src }) => (
-  <GraphicContainer>
-    <GraphicImg src={src} />
-  </GraphicContainer>
-)
-
 const FlexRow = styled.div`
   display: flex;
   height: 100%;
@@ -63,7 +61,7 @@ const FlexRow = styled.div`
 `
 
 const InfoArea = styled.div`
-  width: 40%;
+  width: 100%;
   text-align: center;
 `
 
@@ -77,13 +75,27 @@ const InfoAreaDetails = styled.p`
   font-size: 24px;
 `
 
-const ButtonContainer = styled.div`margin-top: 140px;`
+const Left = styled.div`
+  float: left;
+  width: 40%;
+  margin-right: 10%;
+  text-align: left;
+`
+
+const Right = styled.div`
+  float: right;
+  width: 40%;
+  margin-left: 10%;
+  text-align: right;
+`
+const ButtonContainer = styled.div`margin-top: 100px;`;
 
 export default function InfoSection() {
   return (
     <Info>
       <Heading>Code what really matters, leave the rest to me!</Heading>
       <FlexRow>
+        <Left>
         <InfoArea>
           <InfoAreaHeading>Managing me is super easy!</InfoAreaHeading>
           <InfoAreaDetails>
@@ -97,25 +109,33 @@ export default function InfoSection() {
             Bugs get fixed within hours, no matter how many
           </InfoAreaDetails>
         </InfoArea>
-        <Graphic src={integrationSrc} />
+        </Left>
+        <GraphicContainerRight>
+          <GraphicImg src={integrationSrc} />
+        </GraphicContainerRight>
       </FlexRow>
 
       <FlexRow>
-        <Graphic src={graphSrc} />
-        <InfoArea>
-          <InfoAreaHeading>
-            I auto-scale and adapt to the workload
-          </InfoAreaHeading>
-          <InfoAreaDetails>
-            All PRs through Murcul come with 100% unit test coverage.
-          </InfoAreaDetails>
-          <InfoAreaDetails>
-            Fleshout integration testing for critical user flows.
-          </InfoAreaDetails>
-        </InfoArea>
+        <GraphicContainerLeft>
+          <GraphicImg src={graphSrc} />
+        </GraphicContainerLeft>
+        <Right>
+          <InfoArea>
+            <InfoAreaHeading>
+              I auto-scale and adapt to the workload
+            </InfoAreaHeading>
+            <InfoAreaDetails>
+              All PRs through Murcul come with 100% unit test coverage.
+            </InfoAreaDetails>
+            <InfoAreaDetails>
+              Fleshout integration testing for critical user flows.
+            </InfoAreaDetails>
+          </InfoArea>
+        </Right>
       </FlexRow>
 
       <FlexRow>
+        <Left>
         <InfoArea>
           <InfoAreaHeading>I meet deadlines. Seriously!</InfoAreaHeading>
           <InfoAreaDetails>
@@ -125,7 +145,10 @@ export default function InfoSection() {
             Never get charged for PR code revisions
           </InfoAreaDetails>
         </InfoArea>
-        <Graphic src={ticketSrc} />
+        </Left>
+        <GraphicContainerRight>
+          <GraphicImg src={ticketSrc} />
+        </GraphicContainerRight>
       </FlexRow>
       <ButtonContainer>
         <Button>Take a tour</Button>
