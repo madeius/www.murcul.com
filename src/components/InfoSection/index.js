@@ -1,18 +1,18 @@
-import React from "react";
-import styled from "styled-components";
-import Button from "../Button";
+import React from 'react'
+import styled from 'styled-components'
+import Button from '../Button'
 
-import logoSrc from "../../assets/logo-inverted.png";
-import graphSrc from "../../assets/graph.svg";
-import ticketSrc from "../../assets/ticket.gif";
-import ticketInvertedSrc from "../../assets/ticket-inverted.gif";
-import integrationSrc from "../../assets/integrations.svg";
-import logoInvertedSrc from "../../assets/logo-icon-inverted.svg";
+import logoSrc from '../../assets/logo-inverted.png'
+import graphSrc from '../../assets/graph.svg'
+import ticketSrc from '../../assets/ticket.gif'
+import ticketInvertedSrc from '../../assets/ticket-inverted.gif'
+import integrationSrc from '../../assets/integrations.svg'
+import logoInvertedSrc from '../../assets/logo-icon-inverted.svg'
 
 const Section = styled.div`
   width: 80%;
   margin: auto;
-`;
+`
 
 const Heading = styled.h1`
   text-align: center;
@@ -20,14 +20,14 @@ const Heading = styled.h1`
   margin: 40px 0px 40px 0;
   font-size: 45px;
   margin-bottom: 100px;
-`;
+`
 
 const GraphicContainer = styled.div`
   max-width: 60%;
   margin-left: 5%;
   margin-right: 5%;
   max-height: 500px;
-`;
+`
 
 const InfoContainer = styled.section`
   backgrond-color: #f5f5f5;
@@ -38,21 +38,21 @@ const InfoContainer = styled.section`
   min-height: 300px;
   padding-bottom: 60px;
   padding-top: 60px;
-`;
+`
 
 const Info = props => (
   <InfoContainer>
     <Section {...props} />
   </InfoContainer>
-);
+)
 
-const GraphicImg = styled.img`width: 100%;`;
+const GraphicImg = styled.img`width: 100%;`
 
 const Graphic = ({ src }) => (
   <GraphicContainer>
     <GraphicImg src={src} />
   </GraphicContainer>
-);
+)
 
 const FlexRow = styled.div`
   display: flex;
@@ -60,24 +60,24 @@ const FlexRow = styled.div`
   flex-direction: row;
   justify-items: center;
   margin-bottom: 80px;
-`;
+`
 
 const InfoArea = styled.div`
   width: 40%;
   text-align: center;
-`;
+`
 
 const InfoAreaHeading = styled.h3`
   text-align: left;
   font-size: 26px;
-`;
+`
 
 const InfoAreaDetails = styled.p`
   text-align: left;
   font-size: 24px;
-`;
+`
 
-const ButtonContainer = styled.div`margin-top: 140px;`;
+const ButtonContainer = styled.div`margin-top: 140px;`
 
 export default function InfoSection() {
   return (
@@ -131,5 +131,5 @@ export default function InfoSection() {
         <Button>Take a tour</Button>
       </ButtonContainer>
     </Info>
-  );
+  )
 }

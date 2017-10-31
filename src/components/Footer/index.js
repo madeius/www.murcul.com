@@ -1,6 +1,6 @@
-import React from "react";
-import logoSrc from "../../assets/logo-inverted.png";
-import styled from "styled-components";
+import React from 'react'
+import logoSrc from '../../assets/logo-inverted.png'
+import styled from 'styled-components'
 
 const SectionLeft = styled.div`
   width: 100%;
@@ -8,7 +8,7 @@ const SectionLeft = styled.div`
   float: left;
   margin-left: 10%;
   font-size: 18px;
-`;
+`
 
 const SectionRight = styled.div`
   width: 100%;
@@ -16,11 +16,9 @@ const SectionRight = styled.div`
   float: right;
   margin-right: 10%;
   text-align: right;
-`;
+`
 
-const FooterLogo = styled.img`
-  width: 25%;
-`;
+const FooterLogo = styled.img`width: 25%;`
 
 const FooterContainer = styled.footer`
   background-color: #0465e7;
@@ -29,15 +27,17 @@ const FooterContainer = styled.footer`
   color: white;
   display: flex;
   align-items: center;
-`;
+`
 
 export default function Footer() {
   return (
     <FooterContainer>
-      <SectionLeft>Copyright &copy; 2017 Murcul Limited. All rights reserved.</SectionLeft>
+      <SectionLeft>
+        Copyright &copy; 2017 Murcul Limited. All rights reserved.
+      </SectionLeft>
       <SectionRight>
         <FooterLogo src={logoSrc} />
       </SectionRight>
     </FooterContainer>
-  );
+  )
 }
