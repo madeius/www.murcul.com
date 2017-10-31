@@ -57,8 +57,7 @@ const FlexRow = styled.div`
   height: 100%;
   flex-direction: row;
   justify-items: center;
-  margin-top: 35px;
-  margin-bottom: 35px;
+  margin-bottom: 80px;
 `;
 
 const InfoArea = styled.div`
@@ -89,7 +88,7 @@ const Right = styled.div`
   margin-left: 10%;
   text-align: right;
 `
-const ButtonContainer = styled.div`margin-top: 140px;`;
+const ButtonContainer = styled.div`margin-top: 100px;`;
 
 export default function InfoSection() {
   return (
