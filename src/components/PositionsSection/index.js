@@ -69,7 +69,7 @@ export default function PositionsSection() {
   return (
     <Positions>
       <PositionText>
-        I can preform many roles for your organization!
+        Let me extend your team capacity!
       </PositionText>
       <PositionTabs>
         <PositionTab>QA Engineer</PositionTab>
