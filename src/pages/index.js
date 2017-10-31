@@ -5,6 +5,7 @@ import styles from './styles.css'
 import HeroSection from '../components/HeroSection'
 import InfoSection from '../components/InfoSection'
 import PositionsSection from '../components/PositionsSection'
+import PricingSection from '../components/PricingSection'
 import Footer from '../components/Footer'
 
 const Page = styled.div`
@@ -21,6 +22,7 @@ export default function LandingPage() {
       <HeroSection />
       <InfoSection />
       <PositionsSection />
+      <PricingSection />
       <Footer />
     </Page>
   )

@@ -26,12 +26,12 @@ const GraphicContainerLeft = styled.div`
   max-width: 60%;
   max-height: 500px;
   float: left;
-`;
+`
 const GraphicContainerRight = styled.div`
   max-width: 60%;
   max-height: 500px;
   float: right;
-`;
+`
 
 const InfoContainer = styled.section`
   backgrond-color: #f5f5f5;
@@ -89,7 +89,7 @@ const Right = styled.div`
   margin-left: 10%;
   text-align: right;
 `
-const ButtonContainer = styled.div`margin-top: 100px;`;
+const ButtonContainer = styled.div`margin-top: 100px;`
 
 export default function InfoSection() {
   return (
@@ -97,19 +97,19 @@ export default function InfoSection() {
       <Heading>Code what really matters, leave the rest to me!</Heading>
       <FlexRow>
         <Left>
-        <InfoArea>
-          <InfoAreaHeading>Managing me is super easy!</InfoAreaHeading>
-          <InfoAreaDetails>
-            Assign tickets directly from JIRA, Github or your favourite ticket
-            management system.
-          </InfoAreaDetails>
-          <InfoAreaDetails>
-            Get real-time ticket status updates through Murcul Dashboard.
-          </InfoAreaDetails>
-          <InfoAreaDetails>
-            Bugs get fixed within hours, no matter how many
-          </InfoAreaDetails>
-        </InfoArea>
+          <InfoArea>
+            <InfoAreaHeading>Managing me is super easy!</InfoAreaHeading>
+            <InfoAreaDetails>
+              Assign tickets directly from JIRA, Github or your favourite ticket
+              management system.
+            </InfoAreaDetails>
+            <InfoAreaDetails>
+              Get real-time ticket status updates through Murcul Dashboard.
+            </InfoAreaDetails>
+            <InfoAreaDetails>
+              Bugs get fixed within hours, no matter how many
+            </InfoAreaDetails>
+          </InfoArea>
         </Left>
         <GraphicContainerRight>
           <GraphicImg src={integrationSrc} />
@@ -137,15 +137,15 @@ export default function InfoSection() {
 
       <FlexRow>
         <Left>
-        <InfoArea>
-          <InfoAreaHeading>I meet deadlines. Seriously!</InfoAreaHeading>
-          <InfoAreaDetails>
-            Every assigned ticket will be fully speced before hand.
-          </InfoAreaDetails>
-          <InfoAreaDetails>
-            Never get charged for PR code revisions
-          </InfoAreaDetails>
-        </InfoArea>
+          <InfoArea>
+            <InfoAreaHeading>I meet deadlines. Seriously!</InfoAreaHeading>
+            <InfoAreaDetails>
+              Every assigned ticket will be fully speced before hand.
+            </InfoAreaDetails>
+            <InfoAreaDetails>
+              Never get charged for PR code revisions
+            </InfoAreaDetails>
+          </InfoArea>
         </Left>
         <GraphicContainerRight>
           <GraphicImg src={ticketSrc} />
