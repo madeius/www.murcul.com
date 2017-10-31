@@ -7,6 +7,7 @@ const SectionLeft = styled.div`
   margin: auto;
   float: left;
   margin-left: 10%;
+  font-size: 18px;
 `;
 
 const SectionRight = styled.div`

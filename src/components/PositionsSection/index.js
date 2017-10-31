@@ -55,7 +55,7 @@ export default function PositionsSection() {
       <PositionTab>QA Engineer</PositionTab>
       <PositionTab>Data Scientist</PositionTab>
       <PositionTab>Frontend Dev</PositionTab>
-
+      <br/>
       <Button>Have a look!</Button>
     </Positions>
   );

@@ -25,8 +25,10 @@ const NavBarItem = styled.a`
   font-size: 24px;
   justify-content: center;
   align-items: center;
-  margin-left: 100px;
+  margin-left: 60px;
   line-height: 60px;
+  padding: 25px;
+  cursor: pointer;
 `;
 
 const NavBarItemGroup = styled.div`
