@@ -73,6 +73,7 @@ const InfoAreaHeading = styled.h3`
 const InfoAreaDetails = styled.p`
   text-align: left;
   font-size: 24px;
+  color: #515151;
 `;
 
 const Left = styled.div`
