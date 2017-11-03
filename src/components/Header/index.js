@@ -22,6 +22,8 @@ const NavBarLogoGroup = styled.div`
 
 const NavBarItem = styled.a`
   height: 100%;
+  text-decoration: none;
+  color: white;
   font-size: 24px;
   justify-content: center;
   align-items: center;
@@ -44,8 +46,8 @@ export default function Header() {
         <NavBarLogo src={logoSrc} />
       </NavBarLogoGroup>
       <NavBarItemGroup>
-        <NavBarItem>About</NavBarItem>
-        <NavBarItem>Blog</NavBarItem>
+        <NavBarItem href="#info-section">About</NavBarItem>
+        <NavBarItem href="https://medium.com/@murcul" target="_blank">Blog</NavBarItem>
       </NavBarItemGroup>
     </NavBar>
   )

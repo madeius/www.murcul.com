@@ -1,19 +1,23 @@
-import React from 'react'
-import Header from '../Header'
-import Button from '../Button'
-import styled from 'styled-components'
+import React from "react";
+import Header from "../Header";
+import Button from "../Button";
+import styled from "styled-components";
+import reactLogoSrc from "../../assets/react_logo.svg";
+import reduxLogoSrc from "../../assets/redux_logo.png";
+import nodeLogoSrc from "../../assets/node_logo.svg";
+import graphqlLogoSrc from "../../assets/graphql_logo.png";
 
 const TitleHeading = styled.h1`
   text-align: center;
   color: white;
   font-size: 50px;
-`
+`;
 
 const SubtitleHeading = styled.h3`
   text-align: center;
   color: white;
   font-size: 25px;
-`
+`;
 
 const Section = styled.section`
   background: linear-gradient(
@@ -31,7 +35,7 @@ const Section = styled.section`
 
   display: flex;
   flex-direction: column;
-`
+`;
 
 const Hero = styled.div`
   flex-grow: 1;
@@ -39,14 +43,22 @@ const Hero = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-`
+`;
 
 const Controls = styled.div`
   display: flex;
   justify-content: space-around;
   width: 50%;
   margin-top: 20px;
-`
+`;
+
+const Logos = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 60%;
+`;
 
 export default function HeroSection() {
   return (
@@ -54,15 +66,22 @@ export default function HeroSection() {
       <Header />
       <Hero>
         <TitleHeading>Hello, I am Murcul</TitleHeading>
+        <Logos>
+          <img width={100} src={reactLogoSrc} />
+          <img width={100} src={reduxLogoSrc} />
+          <img width={100} src={nodeLogoSrc} />
+          <img width={100} src={graphqlLogoSrc} />
+        </Logos>
+
         <SubtitleHeading>
           On Demand, self managed engineering team in the cloud
         </SubtitleHeading>
         <Controls>
-          <Button onClick={() => this.setState({ showModal: true })}>
-            Learn More
-          </Button>
+          <a href="#info-section">
+            <Button>Learn More</Button>
+          </a>
         </Controls>
       </Hero>
     </Section>
-  )
+  );
 }
