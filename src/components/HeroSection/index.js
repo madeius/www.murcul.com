@@ -59,10 +59,7 @@ export default function HeroSection() {
         </SubtitleHeading>
         <Controls>
           <Button onClick={() => this.setState({ showModal: true })}>
-            Tell Me More
-          </Button>
-          <Button onClick={() => this.setState({ showModal: true })}>
-            Schedule A Demo
+            Learn More
           </Button>
         </Controls>
       </Hero>

@@ -68,16 +68,13 @@ const PositionGraphic = styled.div`
 export default function PositionsSection() {
   return (
     <Positions>
-      <PositionText>
-        Let me extend your team capacity!
-      </PositionText>
+      <PositionText>Let me extend your team capacity!</PositionText>
       <PositionTabs>
         <PositionTab>QA Engineer</PositionTab>
         <PositionTab>Data Scientist</PositionTab>
         <PositionTab>Frontend Dev</PositionTab>
       </PositionTabs>
       <PositionGraphic />
-      <Button>Have a look!</Button>
     </Positions>
   )
 }

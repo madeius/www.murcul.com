@@ -45,7 +45,6 @@ export default function Header() {
       </NavBarLogoGroup>
       <NavBarItemGroup>
         <NavBarItem>About</NavBarItem>
-        <NavBarItem>Contact</NavBarItem>
         <NavBarItem>Blog</NavBarItem>
       </NavBarItemGroup>
     </NavBar>

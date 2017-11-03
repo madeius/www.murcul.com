@@ -37,6 +37,7 @@ export default function Footer() {
       </SectionLeft>
       <SectionRight>
         <FooterLogo src={logoSrc} />
+        <div>contact@murcul.com</div>
       </SectionRight>
     </FooterContainer>
   )

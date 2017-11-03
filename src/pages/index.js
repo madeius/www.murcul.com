@@ -21,8 +21,8 @@ export default function LandingPage() {
     <Page>
       <HeroSection />
       <InfoSection />
-      <PositionsSection />
-      <PricingSection />
+      {/* <PositionsSection /> */}
+      {/* <PricingSection /> */}
       <Footer />
     </Page>
   )
