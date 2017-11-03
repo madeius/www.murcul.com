@@ -65,7 +65,7 @@ export default function HeroSection() {
     <Section>
       <Header />
       <Hero>
-        <TitleHeading>Hello, I am Murcul</TitleHeading>
+        <TitleHeading>Hello. I am Murcul</TitleHeading>
         <Logos>
           <img width={100} src={reactLogoSrc} />
           <img width={100} src={reduxLogoSrc} />
