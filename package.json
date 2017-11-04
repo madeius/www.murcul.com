@@ -1,0 +1,19 @@
+{
+  "name": "murcul-marketing-site",
+  "description": "Murcul - www.murcul.com",
+  "license": "MIT",
+  "scripts": {
+    "develop": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "prettier": "prettier --single-quote --write --no-semi '{src,__{tests,mocks}__}/**/*.js'"
+  },
+  "dependencies": {
+    "gatsby": "^1.9.42",
+    "gatsby-link": "^1.4.1",
+    "gatsby-plugin-styled-components": "^1.0.5",
+    "prettier": "^1.7.0",
+    "react-modal": "^2.3.3",
+    "react-scrolllock": "^1.0.9"
+  }
+}
