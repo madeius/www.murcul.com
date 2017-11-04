@@ -27,9 +27,9 @@ jobs:
 
 			# store the build in the workspace to share it with deploy job
 			- persist_to_workspace:
-				root: ~/repo
-				paths:
-					- public/*
+          root: ~/repo
+          paths:
+            - public/*
 	deploy:
 		docker:
 			- image: "mesosphere/aws-cli"
@@ -37,14 +37,17 @@ jobs:
 		working_directory: /tmp
 		steps:
 			- attach_workspace:
-				at: /tmp/repo
+          at: /tmp/repo
 
 			- run:
-				name: Deploy to S3 if tests pass and branch is Master
-				command: aws s3 sync /tmp/repo/public s3://www.murcul.com.s3-website-us-west-1.amazonaws.com --delete
+          name: Deploy to S3 if tests pass and branch is Master
+          command: aws s3 sync /tmp/repo/public s3://www.murcul.com.s3-website-us-west-1.amazonaws.com --delete
 
 workflows:
 	version: 2
 	build-deploy:
 		jobs:
 			- build
+      - deploy
+          requires:
+            - build
