@@ -3,9 +3,9 @@ import Header from "../Header";
 import Button from "../Button";
 import styled from "styled-components";
 import reactLogoSrc from "../../assets/react_logo.svg";
-import reduxLogoSrc from "../../assets/redux_logo.png";
-import nodeLogoSrc from "../../assets/node_logo.svg";
-import graphqlLogoSrc from "../../assets/graphql_logo.png";
+import reduxLogoSrc from "../../assets/redux_white.svg";
+import jsLogoSrc from "../../assets/js_white.svg";
+import graphqlLogoSrc from "../../assets/graphql_white.svg";
 
 const TitleHeading = styled.h1`
   text-align: center;
@@ -69,7 +69,7 @@ export default function HeroSection() {
         <Logos>
           <img width={100} src={reactLogoSrc} />
           <img width={100} src={reduxLogoSrc} />
-          <img width={100} src={nodeLogoSrc} />
+          <img width={100} src={jsLogoSrc} />
           <img width={100} src={graphqlLogoSrc} />
         </Logos>
 
