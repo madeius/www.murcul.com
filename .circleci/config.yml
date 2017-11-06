@@ -39,9 +39,7 @@ jobs:
       - attach_workspace:
           at: /tmp
 
-      - run:
-          name: Deploy to S3 if tests pass and branch is Master
-          command: aws s3 sync /tmp/repo/public s3://www.murcul.com.s3-website-us-west-1.amazonaws.com --delete
+      - run: "aws s3 sync /tmp/repo/public s3://www.murcul.com.s3-website-us-west-1.amazonaws.com --delete"
 
 workflows:
   version: 2
