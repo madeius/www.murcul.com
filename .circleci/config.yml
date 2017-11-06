@@ -32,7 +32,7 @@ jobs:
             - repo/public/*
   deploy:
     docker:
-      - image: "mesosphere/aws-cli"
+      - image: "fstab/aws-cli"
 
     working_directory: /tmp
     steps:
