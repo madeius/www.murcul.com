@@ -65,7 +65,7 @@ export default function HeroSection() {
     <Section>
       <Header />
       <Hero>
-        <TitleHeading>Hello. I am Murcul</TitleHeading>
+        <TitleHeading>Hello. I am Murcul.</TitleHeading>
         <Logos>
           <img width={100} src={reactLogoSrc} />
           <img width={100} src={reduxLogoSrc} />
@@ -74,7 +74,7 @@ export default function HeroSection() {
         </Logos>
 
         <SubtitleHeading>
-          On Demand, self managed engineering team in the cloud
+          A highly scalable, on demand, self managed engineer in the cloud
         </SubtitleHeading>
         <Controls>
           <a href="#info-section">

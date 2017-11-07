@@ -98,17 +98,20 @@ const ButtonContainer = styled.div`margin-top: 100px;`;
 export default function InfoSection() {
   return (
     <Info id="info-section">
-      <Heading>Code what really matters, leave the rest to me!</Heading>
+      <Heading>Code what really matters. Let me handle the rest.</Heading>
 
       <FlexRow>
         <Left>
           <InfoArea>
-            <InfoAreaHeading>I meet deadlines. Seriously!</InfoAreaHeading>
+            <InfoAreaHeading>I meet every deadline. Seriously!</InfoAreaHeading>
             <InfoAreaDetails>
-              Every assigned ticket will be fully speced before hand.
+              Every assigned ticket is fully speced before hand
             </InfoAreaDetails>
             <InfoAreaDetails>
-              Never get charged for PR code revisions
+              Get real time ticket updates through the Murcul Dashboard
+            </InfoAreaDetails>
+            <InfoAreaDetails>
+              Fix even your most time consuming bugs within hours
             </InfoAreaDetails>
           </InfoArea>
         </Left>
@@ -120,13 +123,16 @@ export default function InfoSection() {
         <Right>
           <InfoArea>
             <InfoAreaHeading>
-              I auto-scale and adapt to the workload
+              I auto scale and adapt to incoming workload!
             </InfoAreaHeading>
             <InfoAreaDetails>
-              All PRs through Murcul come with 100% unit test coverage.
+              Optimize your QA and testing framework
             </InfoAreaDetails>
             <InfoAreaDetails>
-              Fleshout integration testing for critical user flows.
+              All PRs come with 100% unit test coverage
+            </InfoAreaDetails>
+            <InfoAreaDetails>
+              Flesh out integration testing for critical user flows
             </InfoAreaDetails>
           </InfoArea>
         </Right>
@@ -135,16 +141,18 @@ export default function InfoSection() {
       <FlexRow>
         <Left>
           <InfoArea>
-            <InfoAreaHeading>Managing me is super easy!</InfoAreaHeading>
+            <InfoAreaHeading>
+              Managing me is quick and super easy!
+            </InfoAreaHeading>
             <InfoAreaDetails>
-              Assign tickets directly from JIRA, Github or your favourite ticket
-              management system.
+              Assign tickets directly from JIRA, GitHub or your favorite ticket
+              management system
             </InfoAreaDetails>
             <InfoAreaDetails>
-              Get real-time ticket status updates through Murcul Dashboard.
+              I can integrate with docker, react, node, go, javascript and more
             </InfoAreaDetails>
             <InfoAreaDetails>
-              Bugs get fixed within hours, no matter how many
+              Get unlimited code reviews with no charge for PR code revisions
             </InfoAreaDetails>
           </InfoArea>
         </Left>
