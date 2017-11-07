@@ -7,6 +7,14 @@ jobs:
     working_directory: /tmp/repo
 
     steps:
+      - name: Install dependencies
+          working_directory: /
+          command: |
+            apt-get -y -qq update
+            apt-get -y -qq install python3.4-dev
+            curl -O https://bootstrap.pypa.io/get-pip.py
+            python3.4 get-pip.py --user
+            pip install awscli --upgrade --user
       - checkout
 
       # Download and cache dependencies
@@ -24,28 +32,10 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
 
       - run: npm run build
-
-      # store the build in the workspace to share it with deploy job
-      - persist_to_workspace:
-          root: /tmp
-          paths:
-            - repo/public/*
-  deploy:
-    docker:
-      - image: "fstab/aws-cli"
-
-    working_directory: /tmp
-    steps:
-      - attach_workspace:
-          at: /tmp
-
-      - run: "aws s3 sync /tmp/repo/public s3://www.murcul.com.s3-website-us-west-1.amazonaws.com --delete"
+      - run: "aws s3 sync public s3://www.murcul.com.s3-website-us-west-1.amazonaws.com --delete"
 
 workflows:
   version: 2
   build-deploy:
     jobs:
       - build
-      - deploy:
-          requires:
-            - build
