@@ -29,6 +29,8 @@ const FooterContainer = styled.footer`
   align-items: center;
 `
 
+const EmailLink = styled.a`color: white;`
+
 export default function Footer() {
   return (
     <FooterContainer>
@@ -37,7 +39,7 @@ export default function Footer() {
       </SectionLeft>
       <SectionRight>
         <FooterLogo src={logoSrc} />
-        <div>contact@murcul.com</div>
+        <div><EmailLink href="mailto:contact@murcul.com">contact@murcul.com</EmailLink></div>
       </SectionRight>
     </FooterContainer>
   )
