@@ -6,9 +6,7 @@ import logoSrc from "../../assets/logo-inverted.png";
 import Section from "../Layout/Section";
 import graphSrc from "../../assets/graph.svg";
 import ticketSrc from "../../assets/ticket.gif";
-import ticketInvertedSrc from "../../assets/ticket-inverted.gif";
 import integrationSrc from "../../assets/integrations.svg";
-import logoInvertedSrc from "../../assets/logo-icon-inverted.svg";
 
 const Heading = styled.h1`
   text-align: center;
@@ -19,7 +17,10 @@ const Heading = styled.h1`
 `;
 
 const Graphic = styled.img`
-  max-width: 60%;
+  @media all and (max-width: 600px) {
+    width: 100%;
+  }
+  width: 50%;
   max-height: 500px;
 `;
 
@@ -41,25 +42,40 @@ const FlexRow = styled.div`
   justify-content: center;
   align-items: center;
   margin-bottom: 80px;
+
+  @media all and (max-width: 600px) {
+    flex-direction: column;
+  }
 `;
 
 const InfoAreaHeading = styled.h3`
-  text-align: left;
+  text-align: center;
   font-size: 1.2em;
 `;
 
 const InfoAreaDetails = styled.p`
-  text-align: left;
+  text-align: center;
   color: #515151;
   margin-bottom: 0;
   margin-top: 8px;
 `;
 
-const InfoArea = styled.div`width: 40%;`;
+const InfoArea = styled.div`
+  @media all and (max-width: 600px) {
+    margin: 0;
+    order: 0;
+  }
+`;
 
-const InfoAreaLeft = InfoArea.extend`margin-right: 10%;`;
+const InfoAreaLeft = InfoArea.extend`
+  margin-right: 10%;
+  order: -1;
+`;
 
-const InfoAreaRight = InfoArea.extend`margin-left: 10%;`;
+const InfoAreaRight = InfoArea.extend`
+  margin-left: 10%;
+  order: 1;
+`;
 
 export default function InfoSection() {
   return (
@@ -67,27 +83,23 @@ export default function InfoSection() {
       <Heading>Code what really matters. Let me handle the rest.</Heading>
 
       <FlexRow>
+        <Graphic src={ticketSrc} />
         <InfoAreaLeft>
           <InfoAreaHeading>I meet every deadline. Seriously!</InfoAreaHeading>
           <InfoAreaDetails>
-            Every assigned ticket is fully speced before hand
+            Every assigned ticket is fully speced upfront
           </InfoAreaDetails>
           <InfoAreaDetails>
-            Get real time ticket updates through the Murcul Dashboard
+            Get clear ETA's through the Murcul Dashboard
           </InfoAreaDetails>
-          <InfoAreaDetails>
-            Fix even your most time consuming bugs within hours
-          </InfoAreaDetails>
+          <InfoAreaDetails>Fix critical bug fixes within hours</InfoAreaDetails>
         </InfoAreaLeft>
-        <Graphic src={ticketSrc} />
       </FlexRow>
 
       <FlexRow>
         <Graphic src={graphSrc} />
         <InfoAreaRight>
-          <InfoAreaHeading>
-            I auto scale and adapt to incoming workload!
-          </InfoAreaHeading>
+          <InfoAreaHeading>I auto scale and adapt to workload!</InfoAreaHeading>
           <InfoAreaDetails>
             Optimize your QA and testing framework
           </InfoAreaDetails>
@@ -101,22 +113,21 @@ export default function InfoSection() {
       </FlexRow>
 
       <FlexRow>
+        <Graphic src={integrationSrc} />
         <InfoAreaLeft>
           <InfoAreaHeading>
             Managing me is quick and super easy!
           </InfoAreaHeading>
           <InfoAreaDetails>
-            Assign tickets directly from JIRA, GitHub or your favorite ticket
-            management system
+            Assign tickets to me directly from JIRA & GitHub
           </InfoAreaDetails>
           <InfoAreaDetails>
-            I can integrate with docker, react, node, go, javascript and more
+            Setup a cross platform dev workflow through Docker
           </InfoAreaDetails>
           <InfoAreaDetails>
-            Get unlimited code reviews with no charge for PR code revisions
+            Get unlimited PR code revisions at no cost
           </InfoAreaDetails>
         </InfoAreaLeft>
-        <Graphic src={integrationSrc} />
       </FlexRow>
     </Info>
   );
