@@ -7,6 +7,7 @@ export default styled.section`
   margin: auto;
   @media all and (max-width: 600px) {
     width: 90%;
+    margin: 0;
     padding-left: 5%;
     padding-right: 5%;
   }

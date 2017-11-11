@@ -55,7 +55,18 @@ const Logos = styled.div`
   justify-content: space-around;
   align-items: center;
   width: 60%;
+  flex-wrap: wrap;
+
+  @media (max-width: 600px) {
+    width: 100%;
+  }
+
+  @media (max-width: 300px) {
+    display: none;
+  }
 `;
+
+const Logo = styled.img`width: 100px;`;
 
 export default function HeroSection() {
   return (
@@ -64,10 +75,10 @@ export default function HeroSection() {
       <Hero>
         <TitleHeading>Hello. I am Murcul.</TitleHeading>
         <Logos>
-          <img width={100} src={reactLogoSrc} />
-          <img width={100} src={reduxLogoSrc} />
-          <img width={100} src={jsLogoSrc} />
-          <img width={100} src={graphqlLogoSrc} />
+          <Logo src={reactLogoSrc} />
+          <Logo src={reduxLogoSrc} />
+          <Logo src={jsLogoSrc} />
+          <Logo src={graphqlLogoSrc} />
         </Logos>
 
         <SubtitleHeading>

@@ -11,11 +11,7 @@ const NavBar = styled.section`
 
 const NavBarLogo = styled.img`height: 100%;`;
 
-const NavBarLogoGroup = styled.div`
-  height: 100%;
-  width: 100%;
-  float: left;
-`;
+const NavBarLogoGroup = styled.div`height: 100%;`;
 
 const NavBarItem = styled.a`
   height: 100%;
@@ -23,16 +19,16 @@ const NavBarItem = styled.a`
   color: white;
   justify-content: center;
   align-items: center;
-  margin-left: 60px;
-  line-height: 60px;
-  padding: 25px;
+  margin-left: 80px;
   cursor: pointer;
+  margin-right: 60px;
 `;
 
 const NavBarItemGroup = styled.div`
-  float: right;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row-reverse;
   width: 100%;
-  text-align: right;
 `;
 
 export default function Header() {
@@ -42,7 +38,6 @@ export default function Header() {
         <NavBarLogo src={logoSrc} />
       </NavBarLogoGroup>
       <NavBarItemGroup>
-        <NavBarItem href="#info-section">About</NavBarItem>
         <NavBarItem href="https://medium.com/@murcul" target="_blank">
           Blog
         </NavBarItem>

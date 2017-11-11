@@ -5,16 +5,18 @@ import styled from "styled-components";
 const SectionLeft = styled.div`
   width: 100%;
   margin: auto;
-  float: left;
-  margin-left: 10%;
+
+  text-align: center;
+
+  @media (max-width: 350px) {
+    display: none;
+  }
 `;
 
 const SectionRight = styled.div`
   width: 100%;
   margin: auto;
-  float: right;
-  margin-right: 10%;
-  text-align: right;
+  text-align: center;
 `;
 
 const FooterLogo = styled.img`width: 25%;`;
@@ -26,6 +28,7 @@ const FooterContainer = styled.footer`
   color: white;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 `;
 
 const EmailLink = styled.a`color: white;`;
