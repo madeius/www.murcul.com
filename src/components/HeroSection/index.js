@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "../Header";
 import Button from "../Button";
+import Section from "../Layout/Section";
 import styled from "styled-components";
 import reactLogoSrc from "../../assets/react_logo.svg";
 import reduxLogoSrc from "../../assets/redux_white.svg";
@@ -10,16 +11,16 @@ import graphqlLogoSrc from "../../assets/graphql_white.svg";
 const TitleHeading = styled.h1`
   text-align: center;
   color: white;
-  font-size: 50px;
+  font-size: 1.5em;
 `;
 
 const SubtitleHeading = styled.h3`
   text-align: center;
   color: white;
-  font-size: 25px;
+  font-size: 1.2em;
 `;
 
-const Section = styled.section`
+const Container = Section.extend`
   background: linear-gradient(
       3.23deg,
       #1babda 2.17%,
@@ -29,10 +30,6 @@ const Section = styled.section`
     #c4c4c4;
   height: 100vh;
   color: white;
-  width: 80%;
-  padding-left: 10%;
-  padding-right: 10%;
-
   display: flex;
   flex-direction: column;
 `;
@@ -62,7 +59,7 @@ const Logos = styled.div`
 
 export default function HeroSection() {
   return (
-    <Section>
+    <Container>
       <Header />
       <Hero>
         <TitleHeading>Hello. I am Murcul.</TitleHeading>
@@ -82,6 +79,6 @@ export default function HeroSection() {
           </a>
         </Controls>
       </Hero>
-    </Section>
+    </Container>
   );
 }
