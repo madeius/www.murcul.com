@@ -22,6 +22,7 @@ const NavBarItem = styled.a`
   margin-left: 80px;
   cursor: pointer;
   margin-right: 60px;
+  line-height: 2em;
 `;
 
 const NavBarItemGroup = styled.div`
