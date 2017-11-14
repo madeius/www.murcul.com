@@ -12,7 +12,7 @@ const Heading = styled.h1`
   text-align: center;
   color: #0465e7;
   margin: 40px 0px 40px 0;
-  font-size: 1.5em;
+  font-size: 1.8em;
   margin-bottom: 100px;
 `;
 

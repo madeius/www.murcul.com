@@ -11,13 +11,13 @@ import graphqlLogoSrc from "../../assets/graphql_white.svg";
 const TitleHeading = styled.h1`
   text-align: center;
   color: white;
-  font-size: 1.5em;
+  font-size: 5vmax;
 `;
 
 const SubtitleHeading = styled.h3`
   text-align: center;
   color: white;
-  font-size: 1.2em;
+  font-size: 1.7vmax;
 `;
 
 const Container = Section.extend`
