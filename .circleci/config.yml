@@ -13,7 +13,7 @@ jobs:
           command: |
             sudo apt-get -y -qq update
             sudo apt-get install -y python3.4-dev
-            curl -O https://bootstrap.pypa.io/get-pip.py
+            sudo curl -O https://bootstrap.pypa.io/get-pip.py
             sudo python3.4 get-pip.py --user
             sudo pip install awscli --upgrade --user
       - checkout
