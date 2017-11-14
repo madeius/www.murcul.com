@@ -23,6 +23,7 @@ const NavBarItem = styled.a`
   cursor: pointer;
   margin-right: 60px;
   line-height: 2em;
+  font-size: 1.25em;
 `;
 
 const NavBarItemGroup = styled.div`
