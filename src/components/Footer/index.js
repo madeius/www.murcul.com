@@ -1,24 +1,25 @@
-import React from 'react'
-import logoSrc from '../../assets/logo-inverted.png'
-import styled from 'styled-components'
+import React from "react";
+import logoSrc from "../../assets/logo-inverted.png";
+import styled from "styled-components";
 
 const SectionLeft = styled.div`
   width: 100%;
   margin: auto;
-  float: left;
-  margin-left: 10%;
-  font-size: 18px;
-`
+
+  text-align: center;
+
+  @media (max-width: 350px) {
+    display: none;
+  }
+`;
 
 const SectionRight = styled.div`
   width: 100%;
   margin: auto;
-  float: right;
-  margin-right: 10%;
-  text-align: right;
-`
+  text-align: center;
+`;
 
-const FooterLogo = styled.img`width: 25%;`
+const FooterLogo = styled.img`width: 25%;`;
 
 const FooterContainer = styled.footer`
   background-color: #0465e7;
@@ -27,9 +28,10 @@ const FooterContainer = styled.footer`
   color: white;
   display: flex;
   align-items: center;
-`
+  justify-content: space-between;
+`;
 
-const EmailLink = styled.a`color: white;`
+const EmailLink = styled.a`color: white;`;
 
 export default function Footer() {
   return (
@@ -39,8 +41,12 @@ export default function Footer() {
       </SectionLeft>
       <SectionRight>
         <FooterLogo src={logoSrc} />
-        <div><EmailLink href="mailto:contact@murcul.com">contact@murcul.com</EmailLink></div>
+        <div>
+          <EmailLink href="mailto:contact@murcul.com">
+            contact@murcul.com
+          </EmailLink>
+        </div>
       </SectionRight>
     </FooterContainer>
-  )
+  );
 }

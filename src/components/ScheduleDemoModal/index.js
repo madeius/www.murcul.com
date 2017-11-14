@@ -1,25 +1,25 @@
-import styled from 'styled-components'
-import React from 'react'
-import Modal from 'react-modal'
-import ScrollLock from 'react-scrolllock'
+import styled from "styled-components";
+import React from "react";
+import Modal from "react-modal";
+import ScrollLock from "react-scrolllock";
 
-import Colors from './../../colors'
+import Colors from "./../../colors";
 
 const modalBodyStyle = {
   content: {
-    top: '30%',
-    left: '50%',
-    width: '335px',
-    right: 'auto',
-    bottom: 'auto',
-    marginRight: '-50%',
-    transform: 'translate(-50%, -50%)',
+    top: "30%",
+    left: "50%",
+    width: "335px",
+    right: "auto",
+    bottom: "auto",
+    marginRight: "-50%",
+    transform: "translate(-50%, -50%)",
     backgroundColor: Colors.primaryColor,
-    color: 'white'
+    color: "white"
   }
-}
+};
 
-const MainHeading = styled.h1``
+const MainHeading = styled.h1``;
 
 const TextInput = styled.input`
   -webkit-appearance: none;
@@ -30,11 +30,11 @@ const TextInput = styled.input`
   border-radius: 5px;
   width: 100%;
   height: 30px;
-  font-size: 20px;
+  font-size: 1.2em;
   padding-left: 10px;
   color: gray;
   margin-bottom: 10px;
-`
+`;
 
 const SubmitButton = styled.input`
   -webkit-appearance: none;
@@ -43,14 +43,14 @@ const SubmitButton = styled.input`
   height: 47px;
   border-radius: 8px;
   border-width: 0px;
-  font-size: 21px;
+  font-size: 1.2em;
   color: white;
   margin-top: 10px;
-`
+`;
 
 export default class ScheduleDemoModal extends React.Component {
   render() {
-    const { isOpen } = this.props
+    const { isOpen } = this.props;
     return (
       <Modal
         isOpen={isOpen}
@@ -74,6 +74,6 @@ export default class ScheduleDemoModal extends React.Component {
         </form>
         <ScrollLock />
       </Modal>
-    )
+    );
   }
 }

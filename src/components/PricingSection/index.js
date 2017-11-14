@@ -1,13 +1,13 @@
-import React from 'react'
-import Button from '../Button'
-import styled from 'styled-components'
+import React from "react";
+import Button from "../Button";
+import styled from "styled-components";
 
-import Colors from '../../colors'
+import Colors from "../../colors";
 
 const Section = styled.div`
   width: 80%;
   margin: auto;
-`
+`;
 
 const PricingContainer = styled.section`
   width: 100%;
@@ -17,19 +17,19 @@ const PricingContainer = styled.section`
   position: relative;
   box-shadow: 0px 0px 35px #082aa3;
   z-index: 2;
-`
+`;
 
 const Pricing = props => (
   <PricingContainer>
     <Section {...props} />
   </PricingContainer>
-)
+);
 
 const Heading = styled.h1`
   text-align: center;
   color: ${Colors.primaryColor};
-  font-size: 45px;
-`
+  font-size: 1.5em;
+`;
 
 const PricingTab = styled.div`
   width: 250px;
@@ -39,7 +39,7 @@ const PricingTab = styled.div`
   border: none;
   cursor: pointer;
   outline: none;
-`
+`;
 
 const PricingTabs = styled.div`
   display: flex;
@@ -48,9 +48,9 @@ const PricingTabs = styled.div`
   margin: auto;
   justify-content: space-around;
   align-items: center;
-`
+`;
 
-const ButtonContainer = styled.div`margin-top: 100px;`
+const ButtonContainer = styled.div`margin-top: 100px;`;
 
 export default function PricingSection() {
   return (
@@ -65,5 +65,5 @@ export default function PricingSection() {
         <Button>Get in touch</Button>
       </ButtonContainer>
     </Pricing>
-  )
+  );
 }
