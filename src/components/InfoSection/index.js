@@ -3,157 +3,132 @@ import styled from "styled-components";
 import Button from "../Button";
 
 import logoSrc from "../../assets/logo-inverted.png";
+import Section from "../Layout/Section";
 import graphSrc from "../../assets/graph.svg";
 import ticketSrc from "../../assets/ticket.gif";
-import ticketInvertedSrc from "../../assets/ticket-inverted.gif";
 import integrationSrc from "../../assets/integrations.svg";
-import logoInvertedSrc from "../../assets/logo-icon-inverted.svg";
-
-const Section = styled.div`
-  width: 70%;
-  margin: auto;
-`;
 
 const Heading = styled.h1`
   text-align: center;
   color: #0465e7;
   margin: 40px 0px 40px 0;
-  font-size: 45px;
+  font-size: 1.8em;
   margin-bottom: 100px;
 `;
 
-const GraphicLeft = styled.img`
-  max-width: 60%;
+const Graphic = styled.img`
+  @media all and (max-width: 600px) {
+    width: 100%;
+  }
+  width: 50%;
   max-height: 500px;
-  float: left;
-`;
-const GraphicRight = styled.img`
-  max-width: 60%;
-  max-height: 500px;
-  float: right;
 `;
 
-const InfoContainer = styled.section`
+const Info = Section.extend`
   backgrond-color: #f5f5f5;
   text-align: center;
   box-shadow: 0px 0px 35px #082aa3;
   position: relative;
-  width: 100%;
   min-height: 300px;
   padding-bottom: 60px;
   padding-top: 60px;
   z-index: 2;
 `;
 
-const Info = props => (
-  <InfoContainer>
-    <Section {...props} />
-  </InfoContainer>
-);
-
-const GraphicImg = styled.img`width: 100%;`;
-
 const FlexRow = styled.div`
   display: flex;
-  height: 100%;
+  height: auto;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   margin-bottom: 80px;
-`;
 
-const InfoArea = styled.div`
-  width: 100%;
-  text-align: center;
+  @media all and (max-width: 600px) {
+    flex-direction: column;
+  }
 `;
 
 const InfoAreaHeading = styled.h3`
-  text-align: left;
-  font-size: 26px;
+  text-align: center;
+  font-size: 1.2em;
 `;
 
 const InfoAreaDetails = styled.p`
-  text-align: left;
-  font-size: 24px;
+  text-align: center;
   color: #515151;
   margin-bottom: 0;
   margin-top: 8px;
 `;
 
-const Left = styled.div`
-  float: left;
-  width: 40%;
-  margin-right: 10%;
-  text-align: left;
+const InfoArea = styled.div`
+  @media all and (max-width: 600px) {
+    margin: 0;
+    order: 0;
+  }
 `;
 
-const Right = styled.div`
-  float: right;
-  width: 40%;
-  margin-left: 10%;
-  text-align: right;
+const InfoAreaLeft = InfoArea.extend`
+  margin-right: 10%;
+  order: -1;
 `;
-const ButtonContainer = styled.div`margin-top: 100px;`;
+
+const InfoAreaRight = InfoArea.extend`
+  margin-left: 10%;
+  order: 1;
+`;
 
 export default function InfoSection() {
   return (
     <Info id="info-section">
-      <Heading>Code what really matters, leave the rest to me!</Heading>
+      <Heading>Code what really matters. Let me handle the rest.</Heading>
 
       <FlexRow>
-        <Left>
-          <InfoArea>
-            <InfoAreaHeading>I meet deadlines. Seriously!</InfoAreaHeading>
-            <InfoAreaDetails>
-              Every assigned ticket will be fully speced before hand.
-            </InfoAreaDetails>
-            <InfoAreaDetails>
-              Never get charged for PR code revisions
-            </InfoAreaDetails>
-          </InfoArea>
-        </Left>
-        <GraphicRight src={ticketSrc} />
+        <Graphic src={ticketSrc} />
+        <InfoAreaLeft>
+          <InfoAreaHeading>I meet every deadline. Seriously!</InfoAreaHeading>
+          <InfoAreaDetails>
+            Every assigned ticket is fully speced upfront
+          </InfoAreaDetails>
+          <InfoAreaDetails>
+            Get clear ETA's through the Murcul Dashboard
+          </InfoAreaDetails>
+          <InfoAreaDetails>Fix critical bug fixes within hours</InfoAreaDetails>
+        </InfoAreaLeft>
       </FlexRow>
 
       <FlexRow>
-        <GraphicLeft src={graphSrc} />
-        <Right>
-          <InfoArea>
-            <InfoAreaHeading>
-              I auto-scale and adapt to the workload
-            </InfoAreaHeading>
-            <InfoAreaDetails>
-              All PRs through Murcul come with 100% unit test coverage.
-            </InfoAreaDetails>
-            <InfoAreaDetails>
-              Fleshout integration testing for critical user flows.
-            </InfoAreaDetails>
-          </InfoArea>
-        </Right>
+        <Graphic src={graphSrc} />
+        <InfoAreaRight>
+          <InfoAreaHeading>I auto scale and adapt to workload!</InfoAreaHeading>
+          <InfoAreaDetails>
+            Optimize your QA and testing framework
+          </InfoAreaDetails>
+          <InfoAreaDetails>
+            All PRs come with 100% unit test coverage
+          </InfoAreaDetails>
+          <InfoAreaDetails>
+            Flesh out integration testing for critical user flows
+          </InfoAreaDetails>
+        </InfoAreaRight>
       </FlexRow>
 
       <FlexRow>
-        <Left>
-          <InfoArea>
-            <InfoAreaHeading>Managing me is super easy!</InfoAreaHeading>
-            <InfoAreaDetails>
-              Assign tickets directly from JIRA, Github or your favourite ticket
-              management system.
-            </InfoAreaDetails>
-            <InfoAreaDetails>
-              Get real-time ticket status updates through Murcul Dashboard.
-            </InfoAreaDetails>
-            <InfoAreaDetails>
-              Bugs get fixed within hours, no matter how many
-            </InfoAreaDetails>
-          </InfoArea>
-        </Left>
-        <GraphicRight src={integrationSrc} />
+        <Graphic src={integrationSrc} />
+        <InfoAreaLeft>
+          <InfoAreaHeading>
+            Managing me is quick and super easy!
+          </InfoAreaHeading>
+          <InfoAreaDetails>
+            Assign tickets to me directly from JIRA & GitHub
+          </InfoAreaDetails>
+          <InfoAreaDetails>
+            Setup a cross platform dev workflow through Docker
+          </InfoAreaDetails>
+          <InfoAreaDetails>
+            Get unlimited PR code revisions at no cost
+          </InfoAreaDetails>
+        </InfoAreaLeft>
       </FlexRow>
-
-      {/* <ButtonContainer>
-        <Button>Take a tour</Button>
-      </ButtonContainer> */}
     </Info>
   );
 }

@@ -1,25 +1,26 @@
 import React from "react";
 import Header from "../Header";
 import Button from "../Button";
+import Section from "../Layout/Section";
 import styled from "styled-components";
 import reactLogoSrc from "../../assets/react_logo.svg";
-import reduxLogoSrc from "../../assets/redux_logo.png";
-import nodeLogoSrc from "../../assets/node_logo.svg";
-import graphqlLogoSrc from "../../assets/graphql_logo.png";
+import reduxLogoSrc from "../../assets/redux_white.svg";
+import jsLogoSrc from "../../assets/js_white.svg";
+import graphqlLogoSrc from "../../assets/graphql_white.svg";
 
 const TitleHeading = styled.h1`
   text-align: center;
   color: white;
-  font-size: 50px;
+  font-size: 5vmax;
 `;
 
 const SubtitleHeading = styled.h3`
   text-align: center;
   color: white;
-  font-size: 25px;
+  font-size: 1.7vmax;
 `;
 
-const Section = styled.section`
+const Container = Section.extend`
   background: linear-gradient(
       3.23deg,
       #1babda 2.17%,
@@ -29,10 +30,6 @@ const Section = styled.section`
     #c4c4c4;
   height: 100vh;
   color: white;
-  width: 80%;
-  padding-left: 10%;
-  padding-right: 10%;
-
   display: flex;
   flex-direction: column;
 `;
@@ -58,23 +55,34 @@ const Logos = styled.div`
   justify-content: space-around;
   align-items: center;
   width: 60%;
+  flex-wrap: wrap;
+
+  @media (max-width: 600px) {
+    width: 100%;
+  }
+
+  @media (max-width: 300px) {
+    display: none;
+  }
 `;
+
+const Logo = styled.img`width: 100px;`;
 
 export default function HeroSection() {
   return (
-    <Section>
+    <Container>
       <Header />
       <Hero>
-        <TitleHeading>Hello. I am Murcul</TitleHeading>
+        <TitleHeading>Hello. I am Murcul.</TitleHeading>
         <Logos>
-          <img width={100} src={reactLogoSrc} />
-          <img width={100} src={reduxLogoSrc} />
-          <img width={100} src={nodeLogoSrc} />
-          <img width={100} src={graphqlLogoSrc} />
+          <Logo src={reactLogoSrc} />
+          <Logo src={reduxLogoSrc} />
+          <Logo src={jsLogoSrc} />
+          <Logo src={graphqlLogoSrc} />
         </Logos>
 
         <SubtitleHeading>
-          On Demand, self managed engineering team in the cloud
+          A highly scalable, on demand, self managed engineer in the cloud
         </SubtitleHeading>
         <Controls>
           <a href="#info-section">
@@ -82,6 +90,6 @@ export default function HeroSection() {
           </a>
         </Controls>
       </Hero>
-    </Section>
+    </Container>
   );
 }
