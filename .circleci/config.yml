@@ -28,7 +28,12 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
 
       - run: npm run build
-      - run: "aws s3 sync public s3://www.murcul.com --delete --acl public-read"
+      - deploy:
+        name: Deploy to AWS S3
+        command: |
+          if [ "${CIRCLE_BRANCH}" == "master" ]; then
+            aws s3 sync public s3://www.murcul.com --delete --acl public-read
+          fi
 
 workflows:
   version: 2
