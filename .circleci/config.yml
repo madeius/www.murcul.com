@@ -7,14 +7,11 @@ jobs:
     working_directory: ~/repo
 
     steps:
-      - run:
-          name: Install dependencies
-          working_directory: /
-          command: |
-            sudo apt-get -y -qq update
-            sudo apt-get install -y python python-pip python-dev
-            pip install awscli --upgrade --user
       - checkout
+
+      - run: sudo apt-get update && sudo apt-get install -qq -y python-pip libpython-dev
+      - run: curl -O https://bootstrap.pypa.io/get-pip.py && sudo python get-pip.py
+      - run: sudo pip install -q awscli --upgrade
 
       # Download and cache dependencies
       - restore_cache:
@@ -31,7 +28,7 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
 
       - run: npm run build
-      - run: "aws s3 sync public s3://www.murcul.com.s3-website-us-west-1.amazonaws.com --delete"
+      - run: "aws s3 sync public s3://www.murcul.com --delete"
 
 workflows:
   version: 2
