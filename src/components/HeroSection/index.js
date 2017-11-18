@@ -7,6 +7,7 @@ import reactLogoSrc from "../../assets/react_logo.svg";
 import reduxLogoSrc from "../../assets/redux_white.svg";
 import jsLogoSrc from "../../assets/js_white.svg";
 import graphqlLogoSrc from "../../assets/graphql_white.svg";
+import ScheduleDemoModal from "../ScheduleDemoModal";
 
 const TitleHeading = styled.h1`
   text-align: center;
@@ -71,6 +72,7 @@ const Logo = styled.img`width: 100px;`;
 export default function HeroSection() {
   return (
     <Container>
+      <ScheduleDemoModal isOpen={true}></ScheduleDemoModal>
       <Header />
       <Hero>
         <TitleHeading>Hello. I am Murcul.</TitleHeading>
