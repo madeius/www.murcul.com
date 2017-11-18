@@ -19,7 +19,6 @@ const Page = styled.div`
 export default function LandingPage() {
   return (
     <Page>
-      <script type="text/javascript" id="hs-script-loader" src="//js.hs-scripts.com/3957039.js"></script>
       <HeroSection />
       <InfoSection />
       {/* <PositionsSection /> */}
