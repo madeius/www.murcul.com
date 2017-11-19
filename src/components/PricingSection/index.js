@@ -70,32 +70,50 @@ export default function PricingSection() {
           <Cell>Code Reviews</Cell>
           <Cell>Tech Specs</Cell>
           <Cell>QA Coverage</Cell>
-          <Cell>Customer Usage Analytics</Cell> 
+          <Cell>Customer Usage Analytics</Cell>
           <Cell>Critical Bug Fixes SLA</Cell>
         </Plan>
       </Column>
       <Column>
         <Plan>
-          <Cell>Feature</Cell>
-          <Cell>Hello</Cell>
-          <Cell>Hello</Cell>
-          <Cell>Hello</Cell>
+          <Cell>Starter Pack</Cell>
+          <Cell>200 - 500 hrs/month</Cell>
+          <Cell>No</Cell>
+          <Cell>40%</Cell>
+          <Cell>No</Cell>
+          <Cell>Unlimited</Cell>
+          <Cell>Yes</Cell>
+          <Cell>No</Cell>
+          <Cell>No</Cell>
+          <Cell>24 - 72 Hours</Cell>
         </Plan>
       </Column>
       <Column>
         <Plan>
-          <Cell>Feature</Cell>
-          <Cell>Hello</Cell>
-          <Cell>Hello</Cell>
-          <Cell>Hello</Cell>
+          <Cell>Growth Pack</Cell>
+          <Cell>500 - 1000 hrs/month</Cell>
+          <Cell>Yes</Cell>
+          <Cell>40%</Cell>
+          <Cell>No</Cell>
+          <Cell>Unlimited</Cell>
+          <Cell>Yes</Cell>
+          <Cell>100%</Cell>
+          <Cell>No</Cell>
+          <Cell>3 - 10 Hours</Cell>
         </Plan>
       </Column>
       <Column>
         <Plan>
-          <Cell>Feature</Cell>
-          <Cell>Hello</Cell>
-          <Cell>Hello</Cell>
-          <Cell>Hello</Cell>
+          <Cell>Pro Pack</Cell>
+          <Cell>1000 - 5000 hrs/month</Cell>
+          <Cell>Yes</Cell>
+          <Cell>100%</Cell>
+          <Cell>Yes</Cell>
+          <Cell>Unlimited</Cell>
+          <Cell>Yes</Cell>
+          <Cell>100%</Cell>
+          <Cell>Yes</Cell>
+          <Cell>1 - 2 Hours</Cell>
         </Plan>
       </Column>
       {/* <ButtonContainer>
