@@ -15,7 +15,7 @@ const PricingContainer = styled.section`
   padding-bottom: 60px;
   text-align: center;
   position: relative;
-  box-shadow: 0px 0px 35px #082aa3;
+  /* box-shadow: 0px 0px 35px #082aa3; */
   z-index: 2;
 `;
 
@@ -31,39 +31,76 @@ const Heading = styled.h1`
   font-size: 1.5em;
 `;
 
-const PricingTab = styled.div`
-  width: 250px;
-  height: 400px;
-  background-color: lightgrey;
-  border-radius: 7px;
-  border: none;
-  cursor: pointer;
-  outline: none;
+const Column = styled.div`
+  float: left;
+  width: 23%;
+  padding: 8px;
 `;
 
-const PricingTabs = styled.div`
-  display: flex;
-  flex-direction: row;
-  width: 80%;
-  margin: auto;
-  justify-content: space-around;
-  align-items: center;
+const Plan = styled.div`
+  list-style-type: none;
+  border: 1px solid #eee;
+  margin: 0;
+  padding: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 `;
 
-const ButtonContainer = styled.div`margin-top: 100px;`;
+const Cell = styled.div`
+  border-bottom: 1px solid #eee;
+  padding: 20px;
+  text-align: center;
+`;
+
+const ButtonContainer = styled.div`
+  margin-top: 100px;
+`;
 
 export default function PricingSection() {
   return (
     <Pricing>
-      <Heading>Pricing</Heading>
-      <PricingTabs>
-        <PricingTab />
-        <PricingTab />
-        <PricingTab />
-      </PricingTabs>
-      <ButtonContainer>
+      <Heading>Pricing Plans</Heading>
+      <Column>
+        <Plan>
+          <Cell>Feature</Cell>
+          <Cell>Product Development Hours</Cell>
+          <Cell>Ship With Feature Flags</Cell>
+          <Cell>Rollover Development Hours</Cell>
+          <Cell>Design Specs</Cell>
+          <Cell>Code Reviews</Cell>
+          <Cell>Tech Specs</Cell>
+          <Cell>QA Coverage</Cell>
+          <Cell>Customer Usage Analytics</Cell> 
+          <Cell>Critical Bug Fixes SLA</Cell>
+        </Plan>
+      </Column>
+      <Column>
+        <Plan>
+          <Cell>Feature</Cell>
+          <Cell>Hello</Cell>
+          <Cell>Hello</Cell>
+          <Cell>Hello</Cell>
+        </Plan>
+      </Column>
+      <Column>
+        <Plan>
+          <Cell>Feature</Cell>
+          <Cell>Hello</Cell>
+          <Cell>Hello</Cell>
+          <Cell>Hello</Cell>
+        </Plan>
+      </Column>
+      <Column>
+        <Plan>
+          <Cell>Feature</Cell>
+          <Cell>Hello</Cell>
+          <Cell>Hello</Cell>
+          <Cell>Hello</Cell>
+        </Plan>
+      </Column>
+      {/* <ButtonContainer>
         <Button>Get in touch</Button>
-      </ButtonContainer>
+      </ButtonContainer> */}
     </Pricing>
   );
 }

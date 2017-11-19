@@ -22,7 +22,7 @@ export default function LandingPage() {
       <HeroSection />
       <InfoSection />
       {/* <PositionsSection /> */}
-      {/* <PricingSection /> */}
+      <PricingSection />
       <Footer />
     </Page>
   );
