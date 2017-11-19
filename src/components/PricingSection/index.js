@@ -37,6 +37,13 @@ const Column = styled.div`
   padding: 8px;
 `;
 
+const ColumnBold = styled.div`
+  float: left;
+  width: 23%;
+  padding: 8px;
+  font-weight: bold;
+`;
+
 const Plan = styled.div`
   list-style-type: none;
   border: 1px solid #eee;
@@ -52,6 +59,13 @@ const Cell = styled.div`
   text-align: center;
 `;
 
+const CellTitle = styled.div`
+  border-bottom: 1px solid #eee;
+  padding: 20px;
+  text-align: center;
+  font-weight: bold;
+`;
+
 const ButtonContainer = styled.div`
   margin-top: 100px;
 `;
@@ -60,7 +74,7 @@ export default function PricingSection() {
   return (
     <Pricing>
       <Heading>Pricing Plans</Heading>
-      <Column>
+      <ColumnBold>
         <Plan>
           <Cell>Feature</Cell>
           <Cell>Product Development Hours</Cell>
@@ -73,10 +87,10 @@ export default function PricingSection() {
           <Cell>Customer Usage Analytics</Cell>
           <Cell>Critical Bug Fixes SLA</Cell>
         </Plan>
-      </Column>
+      </ColumnBold>
       <Column>
         <Plan>
-          <Cell>Starter Pack</Cell>
+          <CellTitle>Starter Pack</CellTitle>
           <Cell>200 - 500 hrs/month</Cell>
           <Cell>No</Cell>
           <Cell>40%</Cell>
@@ -90,7 +104,7 @@ export default function PricingSection() {
       </Column>
       <Column>
         <Plan>
-          <Cell>Growth Pack</Cell>
+          <CellTitle>Growth Pack</CellTitle>
           <Cell>500 - 1000 hrs/month</Cell>
           <Cell>Yes</Cell>
           <Cell>40%</Cell>
@@ -104,7 +118,7 @@ export default function PricingSection() {
       </Column>
       <Column>
         <Plan>
-          <Cell>Pro Pack</Cell>
+          <CellTitle>Pro Pack</CellTitle>
           <Cell>1000 - 5000 hrs/month</Cell>
           <Cell>Yes</Cell>
           <Cell>100%</Cell>
