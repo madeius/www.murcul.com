@@ -27,7 +27,7 @@ const Graphic = styled.img`
 const Info = Section.extend`
   backgrond-color: #f5f5f5;
   text-align: center;
-  box-shadow: 0px 0px 35px #082aa3;
+  /* box-shadow: 0px 0px 35px #082aa3; */
   position: relative;
   min-height: 300px;
   padding-bottom: 60px;
