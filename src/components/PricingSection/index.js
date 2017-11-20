@@ -3,6 +3,8 @@ import Button from "../Button";
 import styled from "styled-components";
 
 import Colors from "../../colors";
+import greenTickSrc from "../../assets/green_tick.svg";
+import redCrossSrc from "../../assets/red_cross.svg";
 
 const Section = styled.div`
   width: 80%;
@@ -59,6 +61,10 @@ const TitleCell = styled.th`
   font-size: 18px;
 `;
 
+const Icon = styled.img`
+  max-width: 30px;
+`;
+
 const ButtonContainer = styled.div`
   margin-top: 100px;
 `;
@@ -85,9 +91,13 @@ export default function PricingSection() {
           <FeatureCell colSpan="3">Ship With Feature Flags</FeatureCell>
         </Row>
         <Row>
-          <Cell>No</Cell>
-          <Cell>Yes</Cell>
-          <Cell>Yes</Cell>
+          <Cell><Icon src={redCrossSrc}/></Cell>
+          <Cell>
+            <Icon src={greenTickSrc} />
+          </Cell>
+          <Cell>
+            <Icon src={greenTickSrc} />
+          </Cell>
         </Row>
         <Row>
           <FeatureCell colSpan="3">Rollover Development Hours</FeatureCell>
@@ -101,9 +111,11 @@ export default function PricingSection() {
           <FeatureCell colSpan="3">Design Specs</FeatureCell>
         </Row>
         <Row>
-          <Cell>No</Cell>
-          <Cell>No</Cell>
-          <Cell>Yes</Cell>
+          <Cell><Icon src={redCrossSrc}/></Cell>
+          <Cell><Icon src={redCrossSrc}/></Cell>
+          <Cell>
+            <Icon src={greenTickSrc} />
+          </Cell>
         </Row>
         <Row>
           <FeatureCell colSpan="3">Code Reviews</FeatureCell>
@@ -117,15 +129,21 @@ export default function PricingSection() {
           <FeatureCell colSpan="3">Tech Specs</FeatureCell>
         </Row>
         <Row>
-          <Cell>Yes</Cell>
-          <Cell>Yes</Cell>
-          <Cell>Yes</Cell>
+          <Cell>
+            <Icon src={greenTickSrc} />
+          </Cell>
+          <Cell>
+            <Icon src={greenTickSrc} />
+          </Cell>
+          <Cell>
+            <Icon src={greenTickSrc} />
+          </Cell>
         </Row>
         <Row>
           <FeatureCell colSpan="3">QA Coverage</FeatureCell>
         </Row>
         <Row>
-          <Cell>No</Cell>
+          <Cell><Icon src={redCrossSrc}/></Cell>
           <Cell>100%</Cell>
           <Cell>100%</Cell>
         </Row>
@@ -133,9 +151,11 @@ export default function PricingSection() {
           <FeatureCell colSpan="3">Customer Usage Analytics</FeatureCell>
         </Row>
         <Row>
-          <Cell>No</Cell>
-          <Cell>No</Cell>
-          <Cell>Yes</Cell>
+          <Cell><Icon src={redCrossSrc}/></Cell>
+          <Cell><Icon src={redCrossSrc}/></Cell>
+          <Cell>
+            <Icon src={greenTickSrc} />
+          </Cell>
         </Row>
         <Row>
           <FeatureCell colSpan="3">Critical Bug Fixes SLA</FeatureCell>
