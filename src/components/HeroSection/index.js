@@ -7,7 +7,6 @@ import reactLogoSrc from "../../assets/react_logo.svg";
 import reduxLogoSrc from "../../assets/redux_white.svg";
 import jsLogoSrc from "../../assets/js_white.svg";
 import graphqlLogoSrc from "../../assets/graphql_white.svg";
-import ScheduleDemoModal from "../ScheduleDemoModal";
 import ScheduleDemoButton from "../ScheduleDemoModal/button";
 
 const TitleHeading = styled.h1`

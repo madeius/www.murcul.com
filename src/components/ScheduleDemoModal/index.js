@@ -1,27 +1,28 @@
-import styled from "styled-components";
-import React from "react";
-import Modal from "react-modal";
-import ScrollLock from "react-scrolllock";
+import styled from 'styled-components'
+import React from 'react'
+import Modal from 'react-modal'
+import ScrollLock from 'react-scrolllock'
 import https from 'https'
 import querystring from 'querystring'
 
-import Colors from "./../../colors";
+import Colors from './../../colors'
 
 const modalBodyStyle = {
   content: {
-    top: "30%",
-    left: "50%",
-    width: "335px",
-    right: "auto",
-    bottom: "auto",
-    marginRight: "-50%",
-    transform: "translate(-50%, -50%)",
+    top: '30%',
+    left: '50%',
+    width: '335px',
+    right: 'auto',
+    bottom: 'auto',
+    marginRight: '-50%',
+    transform: 'translate(-50%, -50%)',
     backgroundColor: Colors.primaryColor,
-    color: "white"
+    color: 'white',
+    fontFamily: 'Hind Madurai, sans-serif'
   }
-};
+}
 
-const MainHeading = styled.h1``;
+const MainHeading = styled.h1``
 
 const TextInput = styled.input`
   -webkit-appearance: none;
@@ -31,12 +32,11 @@ const TextInput = styled.input`
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
   width: 100%;
-  height: 30px;
   font-size: 1.2em;
-  padding-left: 10px;
+  padding: 10px;
   color: gray;
   margin-bottom: 10px;
-`;
+`
 
 const SubmitButton = styled.input`
   -webkit-appearance: none;
@@ -48,19 +48,19 @@ const SubmitButton = styled.input`
   font-size: 1.2em;
   color: white;
   margin-top: 10px;
-`;
+`
 
 export default class ScheduleDemoModal extends React.Component {
   constructor(props) {
     super(props)
-    this.handleSubmit = this.handleSubmit.bind(this);
-    this.handleChangeName = this.handleChangeName.bind(this);
-    this.handleChangeEmail = this.handleChangeEmail.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this)
+    this.handleChangeName = this.handleChangeName.bind(this)
+    this.handleChangeEmail = this.handleChangeEmail.bind(this)
 
     this.state = {
       nameValue: '',
       emailValue: ''
-    };
+    }
   }
 
   handleChangeEmail(e) {
@@ -77,10 +77,10 @@ export default class ScheduleDemoModal extends React.Component {
 
   handleSubmit(e) {
     var postData = querystring.stringify({
-      'email': this.state.emailValue,
-      'name': this.state.nameValue,
-    });
-    
+      email: this.state.emailValue,
+      name: this.state.nameValue
+    })
+
     var options = {
       hostname: 'forms.hubspot.com',
       path: '/uploads/form/v2/3957039/',
@@ -91,26 +91,26 @@ export default class ScheduleDemoModal extends React.Component {
       }
     }
 
-    var request = https.request(options, function(response){
-      console.log("Status: " + response.statusCode);
-      console.log("Headers: " + JSON.stringify(response.headers));
-      response.setEncoding('utf8');
-      response.on('data', function(chunk){
+    var request = https.request(options, function(response) {
+      console.log('Status: ' + response.statusCode)
+      console.log('Headers: ' + JSON.stringify(response.headers))
+      response.setEncoding('utf8')
+      response.on('data', function(chunk) {
         console.log('Body: ' + chunk)
-      });
-    });
+      })
+    })
 
-    request.on('error', function(e){
-      console.log("Problem with request " + e.message)
-    });
+    request.on('error', function(e) {
+      console.log('Problem with request ' + e.message)
+    })
 
-    request.write(postData);
+    request.write(postData)
     request.end()
-    e.preventDefault();
+    e.preventDefault()
   }
 
   render() {
-    const { isOpen } = this.props;
+    const { isOpen } = this.props
     return (
       <Modal
         isOpen={isOpen}
@@ -126,14 +126,25 @@ export default class ScheduleDemoModal extends React.Component {
         <p>Enter your details and we'll be in touch within a working day.</p>
         <form onSubmit={this.handleSubmit}>
           <div>Name:</div>
-          <TextInput type="text" value={this.state.nameValue} onChange={this.handleChangeName} autoFocus required />
+          <TextInput
+            type="text"
+            value={this.state.nameValue}
+            onChange={this.handleChangeName}
+            autoFocus
+            required
+          />
           <div>Email:</div>
-          <TextInput type="email" value={this.state.emailValue} onChange={this.handleChangeEmail} required />
+          <TextInput
+            type="email"
+            value={this.state.emailValue}
+            onChange={this.handleChangeEmail}
+            required
+          />
           <br />
           <SubmitButton type="submit" value="Submit" />
         </form>
         <ScrollLock />
       </Modal>
-    );
+    )
   }
 }
