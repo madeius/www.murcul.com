@@ -31,39 +31,32 @@ const Heading = styled.h1`
   font-size: 1.5em;
 `;
 
-const Column = styled.div`
-  float: left;
-  width: 23%;
-  padding: 8px;
+const PricingTable = styled.table`
+  width: 100%;
 `;
 
-const ColumnBold = styled.div`
-  float: left;
-  width: 23%;
-  padding: 8px;
-  font-weight: bold;
-`;
+const Row = styled.tr``;
 
-const Plan = styled.div`
-  list-style-type: none;
+const Cell = styled.td`
   border: 1px solid #eee;
-  margin: 0;
-  padding: 0;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-`;
-
-const Cell = styled.div`
-  border-bottom: 1px solid #eee;
-  padding: 20px;
+  padding: 15px;
   text-align: center;
 `;
 
-const CellTitle = styled.div`
-  border-bottom: 1px solid #eee;
+const FeatureCell = styled.td`
+  border: 1px solid #eee;
+  padding: 20px;
+  padding-bottom: 5px;
+  background-color: #eee;
+  text-align: left;
+`;
+
+const TitleCell = styled.th`
+  border: 1px solid #eee;
   padding: 20px;
   text-align: center;
   font-weight: bold;
+  font-size: 18px;
 `;
 
 const ButtonContainer = styled.div`
@@ -74,62 +67,85 @@ export default function PricingSection() {
   return (
     <Pricing>
       <Heading>Pricing Plans</Heading>
-      <ColumnBold>
-        <Plan>
-          <Cell>Feature</Cell>
-          <Cell>Product Development Hours</Cell>
-          <Cell>Ship With Feature Flags</Cell>
-          <Cell>Rollover Development Hours</Cell>
-          <Cell>Design Specs</Cell>
-          <Cell>Code Reviews</Cell>
-          <Cell>Tech Specs</Cell>
-          <Cell>QA Coverage</Cell>
-          <Cell>Customer Usage Analytics</Cell>
-          <Cell>Critical Bug Fixes SLA</Cell>
-        </Plan>
-      </ColumnBold>
-      <Column>
-        <Plan>
-          <CellTitle>Starter Pack</CellTitle>
-          <Cell>200 - 500 hrs/month</Cell>
+      <PricingTable cellSpacing="0">
+        <Row>
+          <TitleCell>Starter Pack</TitleCell>
+          <TitleCell>Growth Pack</TitleCell>
+          <TitleCell>Pro Pack</TitleCell>
+        </Row>
+        <Row>
+          <FeatureCell colSpan="3">Product Development Hours</FeatureCell>
+        </Row>
+        <Row>
+          <Cell>200-500 hrs/month</Cell>
+          <Cell>500-1000 hrs/month</Cell>
+          <Cell>1000-5000 hrs/month</Cell>
+        </Row>
+        <Row>
+          <FeatureCell colSpan="3">Ship With Feature Flags</FeatureCell>
+        </Row>
+        <Row>
           <Cell>No</Cell>
+          <Cell>Yes</Cell>
+          <Cell>Yes</Cell>
+        </Row>
+        <Row>
+          <FeatureCell colSpan="3">Rollover Development Hours</FeatureCell>
+        </Row>
+        <Row>
           <Cell>40%</Cell>
-          <Cell>No</Cell>
-          <Cell>Unlimited</Cell>
-          <Cell>Yes</Cell>
-          <Cell>No</Cell>
-          <Cell>No</Cell>
-          <Cell>24 - 72 Hours</Cell>
-        </Plan>
-      </Column>
-      <Column>
-        <Plan>
-          <CellTitle>Growth Pack</CellTitle>
-          <Cell>500 - 1000 hrs/month</Cell>
-          <Cell>Yes</Cell>
-          <Cell>40%</Cell>
-          <Cell>No</Cell>
-          <Cell>Unlimited</Cell>
-          <Cell>Yes</Cell>
+          <Cell>80%</Cell>
           <Cell>100%</Cell>
+        </Row>
+        <Row>
+          <FeatureCell colSpan="3">Design Specs</FeatureCell>
+        </Row>
+        <Row>
           <Cell>No</Cell>
-          <Cell>3 - 10 Hours</Cell>
-        </Plan>
-      </Column>
-      <Column>
-        <Plan>
-          <CellTitle>Pro Pack</CellTitle>
-          <Cell>1000 - 5000 hrs/month</Cell>
+          <Cell>No</Cell>
           <Cell>Yes</Cell>
-          <Cell>100%</Cell>
-          <Cell>Yes</Cell>
+        </Row>
+        <Row>
+          <FeatureCell colSpan="3">Code Reviews</FeatureCell>
+        </Row>
+        <Row>
           <Cell>Unlimited</Cell>
+          <Cell>Unlimited</Cell>
+          <Cell>Unlimited</Cell>
+        </Row>
+        <Row>
+          <FeatureCell colSpan="3">Tech Specs</FeatureCell>
+        </Row>
+        <Row>
           <Cell>Yes</Cell>
+          <Cell>Yes</Cell>
+          <Cell>Yes</Cell>
+        </Row>
+        <Row>
+          <FeatureCell colSpan="3">QA Coverage</FeatureCell>
+        </Row>
+        <Row>
+          <Cell>No</Cell>
           <Cell>100%</Cell>
+          <Cell>100%</Cell>
+        </Row>
+        <Row>
+          <FeatureCell colSpan="3">Customer Usage Analytics</FeatureCell>
+        </Row>
+        <Row>
+          <Cell>No</Cell>
+          <Cell>No</Cell>
           <Cell>Yes</Cell>
-          <Cell>1 - 2 Hours</Cell>
-        </Plan>
-      </Column>
+        </Row>
+        <Row>
+          <FeatureCell colSpan="3">Critical Bug Fixes SLA</FeatureCell>
+        </Row>
+        <Row>
+          <Cell>24-72 hours</Cell>
+          <Cell>3-10 hours</Cell>
+          <Cell>1-2 hours</Cell>
+        </Row>
+      </PricingTable>
       {/* <ButtonContainer>
         <Button>Get in touch</Button>
       </ButtonContainer> */}
