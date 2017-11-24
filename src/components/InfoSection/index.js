@@ -85,12 +85,12 @@ export default function InfoSection() {
       <FlexRow>
         <Graphic src={ticketSrc} />
         <InfoAreaLeft>
-          <InfoAreaHeading>I meet every deadline. Seriously!</InfoAreaHeading>
+          <InfoAreaHeading>Comprehensive development process</InfoAreaHeading>
           <InfoAreaDetails>
             Every assigned ticket is fully speced upfront
           </InfoAreaDetails>
           <InfoAreaDetails>
-            Get clear ETA's through the Murcul Dashboard
+            Get realistic time estimates on each assigned ticket   
           </InfoAreaDetails>
           <InfoAreaDetails>Fix critical bug fixes within hours</InfoAreaDetails>
         </InfoAreaLeft>
@@ -119,7 +119,7 @@ export default function InfoSection() {
             Managing me is quick and super easy!
           </InfoAreaHeading>
           <InfoAreaDetails>
-            Assign tickets to me directly from JIRA & GitHub
+            Assign tickets directly from JIRA & GitHub
           </InfoAreaDetails>
           <InfoAreaDetails>
             Setup a cross platform dev workflow through Docker
