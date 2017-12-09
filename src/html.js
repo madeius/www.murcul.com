@@ -35,10 +35,7 @@ module.exports = class HTML extends React.Component {
           <script 
             dangerouslySetInnerHTML={{__html: `
               window.intercomSettings = {
-                app_id: "e18292ud",
-                name: <%= current_user.name %>, // Full name
-                email: <%= current_user.email %>, // Email address
-                created_at: <%= current_user.created_at.to_i %> // Signup Date
+                app_id: "e18292ud"
               };
             `}}
           />
@@ -49,7 +46,7 @@ module.exports = class HTML extends React.Component {
           />
         </head>
         <body>
-        <script src='https://optassets.ontraport.com/tracking.js' type='text/javascript' async='true' onload='_mri="165490",_mr_domain="murculcom.ontraport.com",mrtracking();'></script>
+        <script src="https://optassets.ontraport.com/tracking.js" type="text/javascript" async="true" onload="_mri='165490',_mr_domain='murculcom.ontraport.com',mrtracking();" />
           {this.props.preBodyComponents}
           <div
             key={`body`}
